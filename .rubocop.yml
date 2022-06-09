@@ -1,0 +1,23 @@
+require:
+  - rubocop-rails
+  - rubocop-performance
+
+AllCops:
+  SuggestExtensions: false
+  NewCops: enable
+  Exclude:
+    - db/**/*
+    - config/**/*
+    - node_modules/**/*
+    - bin/*
+    - vendor/**/*
+  TargetRubyVersion: 2.7
+
+Style/Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
