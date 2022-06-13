@@ -1,7 +1,9 @@
 class CreateQuestions < ActiveRecord::Migration[6.1]
   def change
     create_table :questions do |t|
-      t.text :body
+      t.text :body, null: false
+      t.boolean :correct, default: false
+      t.references :test, null: false, foreign_key: true
 
       t.timestamps
     end
