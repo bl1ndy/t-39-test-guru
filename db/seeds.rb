@@ -8,11 +8,11 @@ end
 backend = Category.create(title: 'Backend')
 frontend = Category.create(title: 'Frontend')
 
-ruby = backend.tests.create(title: 'Ruby', level: 2)
-go = backend.tests.create(title: 'Go', level: 3)
-elixir = backend.tests.create(title: 'Elixir', level: 3)
-html = frontend.tests.create(title: 'HTML', level: 1)
-js = frontend.tests.create(title: 'JS', level: 2)
+ruby = backend.tests.create(title: 'Ruby', level: 2, author_id: 1)
+go = backend.tests.create(title: 'Go', level: 3, author_id: 1)
+elixir = backend.tests.create(title: 'Elixir', level: 3, author_id: 2)
+html = frontend.tests.create(title: 'HTML', level: 1, author_id: 2)
+js = frontend.tests.create(title: 'JS', level: 2, author_id: 3)
 
 ruby_question = ruby.questions.create(body: 'What is a difference between class and module?')
 go_question = go.questions.create(body: 'What is a goroutine?')

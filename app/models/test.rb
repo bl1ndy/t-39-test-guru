@@ -2,8 +2,10 @@
 
 class Test < ApplicationRecord
   belongs_to :category
+  belongs_to :author, class_name: 'User'
   has_many :questions, dependent: :destroy
-  has_and_belongs_to_many :users # rubocop:disable Rails/HasAndBelongsToMany
+  has_many :test_passages, dependent: nil
+  has_many :users, through: :test_passages
 
   class << self
     def by_category(category)
