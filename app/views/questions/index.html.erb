@@ -1,6 +1,6 @@
 <% @test.questions.each do |q| %>
   <p>
-    <%= q.body %> | <%= link_to 'delete', test_question_path(@test, q), data: { method: :delete } %>
+    <%= q.body %> | <%= link_to 'delete', question_path(q), data: { method: :delete } %>
   </p>
 <% end %>
 <p>

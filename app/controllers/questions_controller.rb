@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class QuestionsController < ApplicationController
-  before_action :find_test!
+  before_action :find_test!, except: %i[show destroy]
   before_action :find_question!, only: %i[show destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
@@ -25,7 +25,7 @@ class QuestionsController < ApplicationController
   def destroy
     @question.destroy
 
-    redirect_to test_questions_path(@test)
+    redirect_to test_questions_path(@question.test)
   end
 
   private
@@ -35,7 +35,7 @@ class QuestionsController < ApplicationController
   end
 
   def find_question!
-    @question = @test.questions.find(params[:id])
+    @question = Question.find(params[:id])
   end
 
   def question_params
