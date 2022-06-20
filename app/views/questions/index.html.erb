@@ -1,8 +1,0 @@
-<% @test.questions.each do |q| %>
-  <p>
-    <%= q.body %> | <%= link_to 'delete', question_path(q), data: { method: :delete } %>
-  </p>
-<% end %>
-<p>
-  <%= link_to 'New question', new_test_question_path %>
-</p>
