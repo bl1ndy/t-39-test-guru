@@ -1,0 +1,23 @@
+<h2>
+  <%= @answer.question.body %>
+</h2>
+
+<%= form_with(model: [@question, @answer], local: true) do |f| %>
+  <%= render 'shared/errors', object: f.object %>
+
+  <p>
+    <%= f.label :body %>
+    <%= f.text_area :body, size: '50x5' %>
+  </p>
+
+  <p>
+    <%= f.check_box :correct %>
+    <%= f.label :correct %>
+  </p>
+
+  <p>
+    <%= f.submit button_text %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', @answer.question %>
