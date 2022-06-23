@@ -10,6 +10,8 @@ class TestPassage < ApplicationRecord
   before_validation :before_validation_set_current_question, on: :create
   before_update :before_update_set_next_question
 
+  MINIMAL_SUCCESS_RATE = 85
+
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
 
@@ -20,12 +22,12 @@ class TestPassage < ApplicationRecord
     current_question.nil?
   end
 
-  def success_percent
+  def success_rate
     (correct_questions.to_f / test.questions.count * 100).round
   end
 
   def passed?
-    success_percent >= 85
+    success_rate >= MINIMAL_SUCCESS_RATE
   end
 
   private
