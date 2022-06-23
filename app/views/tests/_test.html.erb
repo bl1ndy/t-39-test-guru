@@ -1,3 +1,6 @@
 <p>
-  <%= link_to test.title, test_path(test) %> (<%= pluralize(test.questions.count, 'question') %>)
+  <%= link_to test.title, test_path(test) %>
+  level: <%= test.level %>
+  (<%= pluralize(test.questions.count, 'question') %>)
+  <%= button_to 'start', start_test_path(test) %>
 </p>
