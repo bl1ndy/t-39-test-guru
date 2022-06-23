@@ -11,6 +11,8 @@ class User < ApplicationRecord
 
   validates :name, :email, presence: true
 
+  has_secure_password
+
   def tests_by_level(level)
     tests.where(level:)
   end
