@@ -2,4 +2,6 @@
 
 class ApplicationController < ActionController::Base
   include Auth
+
+  before_action :authenticate_user!
 end
