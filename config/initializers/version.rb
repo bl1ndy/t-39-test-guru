@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 class TestGuru::Application
-  VERSION = '0.31.27'
+  VERSION = '0.40.31'
 end
