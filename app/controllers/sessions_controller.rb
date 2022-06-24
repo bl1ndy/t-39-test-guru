@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       log_in(@user)
       flash[:success] = "Welcome back, #{@user.name.capitalize}!"
 
-      redirect_to tests_path
+      redirect_to session[:forwarding_url]
     else
       flash.now[:danger] = 'Incorrect email and/or password!'
 

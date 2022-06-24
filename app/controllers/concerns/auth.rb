@@ -9,7 +9,9 @@ module Auth
     def authenticate_user!
       return if logged_in?
 
+      store_location
       flash[:danger] = 'Please log in'
+
       redirect_to login_path
     end
 
@@ -28,6 +30,10 @@ module Auth
     def logout
       reset_session
       @current_user = nil
+    end
+
+    def store_location
+      session[:forwarding_url] = request.original_url if request.get?
     end
 
     helper_method :current_user, :logged_in?
