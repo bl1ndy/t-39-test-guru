@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     @user = User.find_by(email: params[:email])
 
     if @user&.authenticate(params[:password])
-      session[:user_id] = @user.id
+      log_in(@user)
       flash[:success] = "Welcome back, #{@user.name.capitalize}!"
 
       redirect_to tests_path
@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
   # rubocop:enable Metrics/AbcSize
 
   def destroy
-    reset_session
+    logout
 
     redirect_to tests_path
   end
