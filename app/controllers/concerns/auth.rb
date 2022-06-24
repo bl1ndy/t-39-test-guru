@@ -6,6 +6,13 @@ module Auth
   included do
     private
 
+    def authenticate_user!
+      return if logged_in?
+
+      flash[:danger] = 'Please log in'
+      redirect_to login_path
+    end
+
     def log_in(user)
       session[:user_id] = user.id
     end

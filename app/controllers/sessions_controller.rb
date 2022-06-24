@@ -23,6 +23,6 @@ class SessionsController < ApplicationController
   def destroy
     logout
 
-    redirect_to tests_path
+    redirect_to root_path
   end
 end
