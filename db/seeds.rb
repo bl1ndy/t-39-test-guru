@@ -1,7 +1,9 @@
 5.times do |i|
   User.create(
     name: "Example-#{i}",
-    email: "example#{i}@test.com"
+    email: "example#{i}@test.com",
+    password: 'foobar',
+    password_confirmation: 'foobar'
   )
 end
 
