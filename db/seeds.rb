@@ -1,9 +1,9 @@
 5.times do |i|
   User.create(
-    name: "Example-#{i}",
     email: "example#{i}@test.com",
     password: 'foobar',
-    password_confirmation: 'foobar'
+    password_confirmation: 'foobar',
+    confirmed_at: Time.zone.now
   )
 end
 
