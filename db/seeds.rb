@@ -1,11 +1,22 @@
 5.times do |i|
   User.create(
     email: "example#{i}@test.com",
+    first_name: "Example",
+    last_name: "Test-#{i}",
     password: 'foobar',
     password_confirmation: 'foobar',
     confirmed_at: Time.zone.now
   )
 end
+
+Admin.create(
+  email: 'admin@test.com',
+  first_name: "Admin",
+  last_name: "Test",
+  password: 'foobar',
+  password_confirmation: 'foobar',
+  confirmed_at: Time.zone.now
+)
 
 backend = Category.create(title: 'Backend')
 frontend = Category.create(title: 'Frontend')
