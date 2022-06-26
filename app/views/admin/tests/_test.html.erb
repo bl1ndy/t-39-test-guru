@@ -1,0 +1,5 @@
+<p>
+  <%= link_to test.title, admin_test_path(test) %>
+  level: <%= test.level %>
+  (<%= pluralize(test.questions.count, 'question') %>)
+</p>
