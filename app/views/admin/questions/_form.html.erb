@@ -2,7 +2,7 @@
   <%= question_header(@question) %>
 </h1>
 
-<%= form_with(model: [@test, @question], local: true) do |f| %>
+<%= form_with(model: [:admin, @test, @question], local: true) do |f| %>
   <%= render 'shared/errors', object: f.object %>
   <p>
     <%= f.label :body %>
@@ -13,4 +13,4 @@
   </p>
 <% end %>
 
-<%= link_to 'Back', test_path(@question.test) %>
+<%= link_to 'Back', admin_test_path(@question.test) %>

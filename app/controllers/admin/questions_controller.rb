@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class QuestionsController < ApplicationController
+class Admin::QuestionsController < Admin::BaseController
   before_action :find_test!, only: %i[new create]
   before_action :find_question!, except: %i[new create]
 
@@ -16,7 +16,9 @@ class QuestionsController < ApplicationController
     @question = @test.questions.build(question_params)
 
     if @question.save
-      redirect_to @test
+      flash[:success] = 'Question successfully created!'
+
+      redirect_to admin_test_path(@test)
     else
       render :new
     end
@@ -26,7 +28,9 @@ class QuestionsController < ApplicationController
 
   def update
     if @question.update(question_params)
-      redirect_to @question.test
+      flash[:success] = 'Question successfully updated!'
+
+      redirect_to admin_test_path(@question.test)
     else
       render :edit
     end
@@ -35,7 +39,9 @@ class QuestionsController < ApplicationController
   def destroy
     @question.destroy
 
-    redirect_to @question.test
+    flash[:success] = 'Question successfully deleted!'
+
+    redirect_to admin_test_path(@question.test)
   end
 
   private
