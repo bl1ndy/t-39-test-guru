@@ -17,6 +17,8 @@ class User < ApplicationRecord
   has_many :test_passages, dependent: nil
   has_many :tests, through: :test_passages
 
+  validates :first_name, :last_name, presence: true, length: { maximum: 255 }
+
   def tests_by_level(level)
     tests.where(level:)
   end
