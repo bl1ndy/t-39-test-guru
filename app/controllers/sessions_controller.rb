@@ -1,30 +1,18 @@
 # frozen_string_literal: true
 
-class SessionsController < ApplicationController
-  skip_before_action :authenticate_user!
-
-  def new; end
-
+class SessionsController < Devise::SessionsController
   # rubocop:disable Metrics/AbcSize
   def create
-    @user = User.find_by(email: params[:email])
-
-    if @user&.authenticate(params[:password])
-      log_in(@user)
-      flash[:success] = "Welcome back, #{@user.name.capitalize}!"
-
-      redirect_to session[:forwarding_url] || root_path
-    else
-      flash.now[:danger] = 'Incorrect email and/or password!'
-
-      render :new
-    end
+    self.resource = warden.authenticate!(auth_options)
+    set_flash_message!(
+      :notice,
+      :signed_in,
+      first_name: resource.first_name,
+      last_name: resource.last_name
+    )
+    sign_in(resource_name, resource)
+    yield resource if block_given?
+    respond_with resource, location: after_sign_in_path_for(resource)
   end
   # rubocop:enable Metrics/AbcSize
-
-  def destroy
-    logout
-
-    redirect_to root_path
-  end
 end
