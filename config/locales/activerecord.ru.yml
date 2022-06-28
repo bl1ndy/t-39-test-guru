@@ -1,11 +1,20 @@
 ru:
   activerecord:
     models:
+      user: 'Пользователь'
+      admin: 'Администратор'
       test: 'Тест'
       question: 'Вопрос'
       answer: 'Ответ'
 
     attributes:
+      user:
+        first_name: 'Имя'
+        last_name: 'Фамилия'
+        email: 'Почта'
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
+        remember_me: 'Запомнить меня'
       test:
         title: 'Название'
         level: 'Уровень'
