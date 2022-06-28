@@ -101,6 +101,12 @@ en:
           destroy: 'Delete'
           confirm: 'Are you sure?'
 
+  pages:
+    home:
+      header: "Let's pass some tests!"
+      links:
+        tests: 'Tests'
+
   tests:
     index:
       header: 'Available Tests'
@@ -117,5 +123,17 @@ en:
       message:
         one: 'The form contains %{count} error'
         other: 'The form contains %{count} errors'
+    menu:
+      buttons:
+        logout: 'Logout'
+      links:
+        home: 'TestGuru'
+        signup: 'Signup'
+        login: 'Login'
 
-
+  layouts:
+    application:
+      title: 'TestGuru'
+    footer:
+      links:
+        thinknetica: 'Educational project at Thinknetica online school'

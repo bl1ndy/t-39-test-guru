@@ -103,6 +103,12 @@ ru:
           destroy: 'Удалить'
           confirm: 'Вы уверены?'
 
+  pages:
+    home:
+      header: "Время пройти тесты!"
+      links:
+        tests: 'Тесты'
+
   tests:
     index:
       header: 'Доступные Тесты'
@@ -123,3 +129,17 @@ ru:
         few: 'Форма содержит %{count} ошибки'
         many: 'Форма содержит %{count} ошибок'
         other: 'Форма содержит %{count} ошибки'
+    menu:
+      buttons:
+        logout: 'Выйти'
+      links:
+        home: 'TestGuru'
+        signup: 'Регистрация'
+        login: 'Войти'
+
+  layouts:
+    application:
+      title: 'TestGuru'
+    footer:
+      links:
+        thinknetica: 'Учебный проект в онлайн-школе Thinknetica'

@@ -5,7 +5,7 @@
 <p>
   <%= link_to t('.links.edit'), edit_admin_test_path(@test) %> |
   <%= link_to t('.links.destroy'), admin_test_path(@test),
-                         method: :delete, data: { confirm: 'Are you sure?' } %>
+                         method: :delete, data: { confirm: t('.links.confirm') } %>
 </p>
 
 <h2>
