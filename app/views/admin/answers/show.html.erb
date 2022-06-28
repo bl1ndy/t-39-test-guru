@@ -1,13 +1,13 @@
 <h3>
-  Question: <%= @answer.question.body %>
+  <%= t('.question') %>: <%= @answer.question.body %>
 </h3>
 
 <p>
-  <b>Answer</b>: <%= @answer.body %>
+  <b><%= t('.answer') %></b>: <%= @answer.body %>
 </p>
 
 <p>
-  <b>Correct</b>: <%= @answer.correct%>
+  <b><%= t('.correct') %></b>: <%= @answer.correct%>
 </p>
 
-<%= link_to 'Back', admin_question_path(@answer.question) %>
+<%= link_to t('.links.back'), admin_question_path(@answer.question) %>

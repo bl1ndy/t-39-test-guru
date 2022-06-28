@@ -3,6 +3,7 @@ ru:
     models:
       test: 'Тест'
       question: 'Вопрос'
+      answer: 'Ответ'
 
     attributes:
       test:
@@ -14,6 +15,10 @@ ru:
       question:
         body: 'Текст'
         test_id: 'Тест'
+      answer:
+        body: 'Текст'
+        correct: 'Верный'
+        question_id: 'Вопрос'
 
     errors:
       models:
@@ -29,10 +34,17 @@ ru:
             level:
               greater_than: 'должен быть больше %{count}'
               not_an_integer: 'должен быть целым числом'
-
         question:
           attributes:
             body:
               blank: 'не может быть пустым'
             test_id:
               required: 'не может отсутствовать'
+        answer:
+          attributes:
+            body:
+              blank: 'не может быть пустым'
+            question_id:
+              required: 'не может отсутствовать'
+            base:
+              too_much: 'Достигнут лимит ответов для данного вопроса'

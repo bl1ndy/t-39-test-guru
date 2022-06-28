@@ -70,6 +70,36 @@ en:
           base_header: '%{question_title} Question'
           create: 'Create new %{base_header}'
           update: 'Edit %{base_header}'
+    answers:
+      new:
+        header: 'New answer'
+        buttons:
+          create: 'Create'
+      create:
+        success: 'Answer successfully created!'
+      show:
+        question: 'Question'
+        answer: 'Answer'
+        correct: 'Correct'
+        links:
+          back: 'Back'
+      edit:
+        header: 'Edit answer'
+        buttons:
+          update: 'Update'
+      update:
+        success: 'Answer successfully updated!'
+      destroy:
+        success: 'Answer successfully deleted!'
+      form:
+        links:
+          back: 'Back'
+      answer:
+        links:
+          show: 'Show'
+          edit: 'Edit'
+          destroy: 'Delete'
+          confirm: 'Are you sure?'
 
   tests:
     index:

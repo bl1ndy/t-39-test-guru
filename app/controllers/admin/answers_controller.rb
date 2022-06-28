@@ -12,7 +12,7 @@ class Admin::AnswersController < Admin::BaseController
     @answer = @question.answers.build(answer_params)
 
     if @answer.save
-      flash[:success] = 'Answer successfully created!'
+      flash[:success] = t('.create.success')
 
       redirect_to admin_question_path(@question)
     else
@@ -26,7 +26,7 @@ class Admin::AnswersController < Admin::BaseController
 
   def update
     if @answer.update(answer_params)
-      flash[:success] = 'Answer successfully updated!'
+      flash[:success] = t('.update.success')
 
       redirect_to admin_answer_path(@answer)
     else
@@ -37,7 +37,7 @@ class Admin::AnswersController < Admin::BaseController
   def destroy
     @answer.destroy
 
-    flash[:success] = 'Answer successfully deleted!'
+    flash[:success] = t('.destroy.success')
 
     redirect_to admin_question_path(@answer.question)
   end

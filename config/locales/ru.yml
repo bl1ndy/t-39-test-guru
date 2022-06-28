@@ -72,6 +72,36 @@ ru:
           base_header: '%{question_title} Вопрос'
           create: 'Создать новый %{base_header}'
           update: 'Редактировать %{base_header}'
+    answers:
+      new:
+        header: 'Новый ответ'
+        buttons:
+          create: 'Создать'
+      create:
+        success: 'Ответ успешно создан!'
+      show:
+        question: 'Вопрос'
+        answer: 'Ответ'
+        correct: 'Верный'
+        links:
+          back: 'Назад'
+      edit:
+        header: 'Редактировать ответ'
+        buttons:
+          update: 'Обновить'
+      update:
+        success: 'Ответ успешно обновлен!'
+      destroy:
+        success: 'Ответ успешно удален!'
+      form:
+        links:
+          back: 'Назад'
+      answer:
+        links:
+          show: 'Показать'
+          edit: 'Редактировать'
+          destroy: 'Удалить'
+          confirm: 'Вы уверены?'
 
   tests:
     index:

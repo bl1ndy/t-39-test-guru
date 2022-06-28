@@ -3,6 +3,7 @@ en:
     models:
       test: 'Test'
       question: 'Question'
+      answer: 'Answer'
 
     attributes:
       test:
@@ -14,6 +15,10 @@ en:
       question:
         body: 'Text'
         test_id: 'Test'
+      answer:
+        body: 'Text'
+        correct: 'Correct'
+        question_id: 'Question'
 
     errors:
       models:
@@ -35,3 +40,11 @@ en:
               blank: "can't be blank"
             test_id:
               required: 'must exist'
+        answer:
+          attributes:
+            body:
+              blank: "can't be blank"
+            question_id:
+              required: 'must exist'
+            base:
+              too_much: 'Answer limit reached for this question'
