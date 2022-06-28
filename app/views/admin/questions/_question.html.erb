@@ -1,6 +1,6 @@
 <p>
   <%= link_to question.body, admin_question_path(question) %> -
-  <%= link_to 'edit', edit_admin_question_path(question) %> |
-  <%= link_to 'delete', admin_question_path(question),
-                        method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to t('.links.edit'), edit_admin_question_path(question) %> |
+  <%= link_to t('.links.destroy'), admin_question_path(question),
+                        method: :delete, data: { confirm: t('.links.confirm') } %>
 </p>

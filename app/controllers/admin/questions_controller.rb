@@ -16,7 +16,7 @@ class Admin::QuestionsController < Admin::BaseController
     @question = @test.questions.build(question_params)
 
     if @question.save
-      flash[:success] = 'Question successfully created!'
+      flash[:success] = t('.create.success')
 
       redirect_to admin_test_path(@test)
     else
@@ -28,7 +28,7 @@ class Admin::QuestionsController < Admin::BaseController
 
   def update
     if @question.update(question_params)
-      flash[:success] = 'Question successfully updated!'
+      flash[:success] = t('.update.success')
 
       redirect_to admin_test_path(@question.test)
     else
@@ -39,7 +39,7 @@ class Admin::QuestionsController < Admin::BaseController
   def destroy
     @question.destroy
 
-    flash[:success] = 'Question successfully deleted!'
+    flash[:success] = t('.destroy.success')
 
     redirect_to admin_test_path(@question.test)
   end

@@ -38,6 +38,38 @@ en:
           one: '%{count} question'
           other: '%{count} questions'
         level: 'Level'
+    questions:
+      new:
+        buttons:
+          create: 'Create'
+      create:
+        success: 'Question successfully created!'
+      show:
+        question: 'Question'
+        answers: 'Answers:'
+        links:
+          new_answer: 'New answer'
+          back: 'Back'
+      edit:
+        buttons:
+          update: 'Update'
+      update:
+        success: 'Question successfully updated!'
+      destroy:
+        success: 'Question successfully deleted!'
+      form:
+        links:
+          back: 'Back'
+      question:
+        links:
+          edit: 'Edit'
+          destroy: 'Delete'
+          confirm: 'Are you sure?'
+      helpers:
+        question_header:
+          base_header: '%{question_title} Question'
+          create: 'Create new %{base_header}'
+          update: 'Edit %{base_header}'
 
   tests:
     index:
@@ -55,3 +87,5 @@ en:
       message:
         one: 'The form contains %{count} error'
         other: 'The form contains %{count} errors'
+
+

@@ -40,6 +40,38 @@ ru:
           many: '%{count} вопросов'
           other: '%{count} вопросов'
         level: 'Уровень'
+    questions:
+      new:
+        buttons:
+          create: 'Создать'
+      create:
+        success: 'Вопрос успешно создан!'
+      show:
+        question: 'Вопрос'
+        answers: 'Ответы:'
+        links:
+          new_answer: 'Новый ответ'
+          back: 'Назад'
+      edit:
+        buttons:
+          update: 'Обновить'
+      update:
+        success: 'Вопрос успешно обновлен!'
+      destroy:
+        success: 'Вопрос успешно удален!'
+      form:
+        links:
+          back: 'Назад'
+      question:
+        links:
+          edit: 'Редактировать'
+          destroy: 'Удалить'
+          confirm: 'Вы уверены?'
+      helpers:
+        question_header:
+          base_header: '%{question_title} Вопрос'
+          create: 'Создать новый %{base_header}'
+          update: 'Редактировать %{base_header}'
 
   tests:
     index:

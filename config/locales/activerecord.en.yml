@@ -2,6 +2,7 @@ en:
   activerecord:
     models:
       test: 'Test'
+      question: 'Question'
 
     attributes:
       test:
@@ -10,13 +11,16 @@ en:
         category: 'Category'
         category_id: 'Category'
         author: 'Author'
+      question:
+        body: 'Text'
+        test_id: 'Test'
 
     errors:
       models:
         test:
           attributes:
             title:
-              blank: 'can't be blank'
+              blank: "can't be blank"
               taken: 'has already been taken'
             category_id:
               required: 'must exist'
@@ -25,3 +29,9 @@ en:
             level:
               greater_than: 'must be greater than %{count}'
               not_an_integer: 'must be an integer'
+        question:
+          attributes:
+            body:
+              blank: "can't be blank"
+            test_id:
+              required: 'must exist'
