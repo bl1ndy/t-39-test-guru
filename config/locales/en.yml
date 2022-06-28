@@ -118,12 +118,26 @@ en:
       buttons:
         start: 'Start'
 
+  test_passages:
+    show:
+      header: 'Passing the %{title} Test'
+      buttons:
+        submit: 'Next'
+    result:
+      header: '%{title} Test results:'
+      corrects: 'Correct questions: %{correct_questions} from %{questions_count}'
+      success: 'Congratulations! You passed the Test.'
+      failed: 'Test failed! Try again.'
+      links:
+        back: 'Back'
+
   shared:
     errors:
       message:
         one: 'The form contains %{count} error'
         other: 'The form contains %{count} errors'
     menu:
+      greeting: 'Welcome, %{name} Guru!'
       buttons:
         logout: 'Logout'
       links:
@@ -137,3 +151,7 @@ en:
     footer:
       links:
         thinknetica: 'Educational project at Thinknetica online school'
+
+  tests_mailer:
+    completed_test:
+      subject: 'You just completed TestGuru Test!'

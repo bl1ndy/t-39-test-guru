@@ -4,7 +4,7 @@
   </h1>
 
   <% if user_signed_in? %>
-    Welcome, <%= current_user.email %> Guru!
+    <%= t('.greeting', name: current_user.first_name.capitalize) %>
     <%= button_to t('.buttons.logout'), destroy_user_session_path, method: :delete %>
   <% else %>
     <%= link_to t('.links.signup'), new_user_registration_path %> |

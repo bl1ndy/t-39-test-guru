@@ -122,6 +122,19 @@ ru:
       buttons:
         start: 'Начать'
 
+  test_passages:
+    show:
+      header: 'Прохождение %{title} Теста'
+      buttons:
+        submit: 'Следующий'
+    result:
+      header: 'Результаты %{title} Теста:'
+      corrects: 'Правильных ответов: %{correct_questions} из %{questions_count}'
+      success: 'Поздравляем! Вы прошли Тест.'
+      failed: 'Тест провален! Попробуйте снова.'
+      links:
+        back: 'Назад'
+
   shared:
     errors:
       message:
@@ -130,6 +143,7 @@ ru:
         many: 'Форма содержит %{count} ошибок'
         other: 'Форма содержит %{count} ошибки'
     menu:
+      greeting: 'Приветствуем, Гуру %{name}!'
       buttons:
         logout: 'Выйти'
       links:
@@ -143,3 +157,7 @@ ru:
     footer:
       links:
         thinknetica: 'Учебный проект в онлайн-школе Thinknetica'
+
+  tests_mailer:
+    completed_test:
+      subject: 'Вы только что прошли TestGuru Тест!'

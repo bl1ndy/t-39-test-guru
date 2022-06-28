@@ -1,17 +1,17 @@
 <h1>
-  <%= @test.title %> Test results:
+  <%= t('.header', title: @test.title) %>
 </h1>
 
 <p>
-  Correct questions: <%= @test_passage.correct_questions %>
-  from <%= @test.questions.count %>
+  <%= t('.corrects', correct_questions: @test_passage.correct_questions,
+                     questions_count: @test.questions.count) %>
   (<span class="<%= @test_passage.passed? ? 'success-passage' : 'failed-passage' %>">
     <%= @test_passage.success_rate %>%
   </span>)
 </p>
 
 <p>
-  <%= @test_passage.passed? ? 'Congratulations! You passed the Test.' : 'Test failed! Try again.' %>
+  <%= @test_passage.passed? ? t('.success') : t('.failed') %>
 </p>
 
-<%= link_to 'Back', tests_path %>
+<%= link_to t('.links.back'), tests_path %>
