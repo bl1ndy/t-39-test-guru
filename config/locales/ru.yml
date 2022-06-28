@@ -1,0 +1,63 @@
+ru:
+  admin:
+    base:
+      info: 'У вас нет прав на просмотр данной страницы'
+    tests:
+      index:
+        header: 'Доступные Тесты'
+        links:
+          new: 'Новый Тест'
+      new:
+        header: 'Новый Тест'
+        buttons:
+         create: 'Создать'
+      create:
+        success: 'Тест успешно создан!'
+      show:
+        level: 'Уровень'
+        links:
+          edit: 'Редактировать'
+          destroy: 'Удалить'
+          confirm: 'Вы уверены?'
+          new_question: 'Новый вопрос'
+          back: 'Назад'
+        questions: 'Вопросы:'
+      edit:
+        header: 'Редактировать Тест'
+        buttons:
+          update: 'Обновить'
+      update:
+        success: 'Тест успешно обновлен!'
+      destroy:
+        success: 'Тест успешно удален!'
+      form:
+        links:
+          back: 'Назад'
+      test:
+        question:
+          one: '%{count} вопрос'
+          few: '%{count} вопроса'
+          many: '%{count} вопросов'
+          other: '%{count} вопросов'
+        level: 'Уровень'
+
+  tests:
+    index:
+      header: 'Доступные Тесты'
+    test:
+      question:
+        zero: '%{count} вопросов'
+        one: '%{count} вопрос'
+        few: '%{count} вопроса'
+        many: '%{count} вопросов'
+        other: '%{count} вопросов'
+      buttons:
+        start: 'Начать'
+
+  shared:
+    errors:
+      message:
+        one: 'Форма содержит %{count} ошибку'
+        few: 'Форма содержит %{count} ошибки'
+        many: 'Форма содержит %{count} ошибок'
+        other: 'Форма содержит %{count} ошибки'

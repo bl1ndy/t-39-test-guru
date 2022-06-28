@@ -1,0 +1,27 @@
+ru:
+  activerecord:
+    models:
+      test: 'Тест'
+
+    attributes:
+      test:
+        title: 'Название'
+        level: 'Уровень'
+        category: 'Категория'
+        category_id: 'Категория'
+        author: 'Автор'
+
+    errors:
+      models:
+        test:
+          attributes:
+            title:
+              blank: 'не может быть пустым'
+              taken: 'уже было указано для другого теста'
+            category_id:
+              required: 'не может отсутствовать'
+            author_id:
+              required: 'не может отсутствовать'
+            level:
+              greater_than: 'должен быть больше %{count}'
+              not_an_integer: 'должен быть целым числом'
