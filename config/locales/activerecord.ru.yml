@@ -1,0 +1,59 @@
+ru:
+  activerecord:
+    models:
+      user: 'Пользователь'
+      admin: 'Администратор'
+      test: 'Тест'
+      question: 'Вопрос'
+      answer: 'Ответ'
+
+    attributes:
+      user:
+        first_name: 'Имя'
+        last_name: 'Фамилия'
+        email: 'Почта'
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
+        remember_me: 'Запомнить меня'
+      test:
+        title: 'Название'
+        level: 'Уровень'
+        category: 'Категория'
+        category_id: 'Категория'
+        author: 'Автор'
+      question:
+        body: 'Текст'
+        test_id: 'Тест'
+      answer:
+        body: 'Текст'
+        correct: 'Верный'
+        question_id: 'Вопрос'
+
+    errors:
+      models:
+        test:
+          attributes:
+            title:
+              blank: 'не может быть пустым'
+              taken: 'уже было указано для другого теста'
+            category_id:
+              required: 'не может отсутствовать'
+            author_id:
+              required: 'не может отсутствовать'
+            level:
+              greater_than: 'должен быть больше %{count}'
+              not_an_integer: 'должен быть целым числом'
+        question:
+          attributes:
+            body:
+              blank: 'не может быть пустым'
+            test_id:
+              required: 'не может отсутствовать'
+        answer:
+          attributes:
+            body:
+              blank: 'не может быть пустым'
+            question_id:
+              required: 'не может отсутствовать'
+            base:
+              too_much: 'Достигнут лимит ответов для данного вопроса'

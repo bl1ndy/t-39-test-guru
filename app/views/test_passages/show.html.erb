@@ -1,5 +1,5 @@
 <h1>
-  Passing the <%= @test.title %> Test
+  <%= t('.header', title: @test.title) %>
 </h1>
 
 <h3>
@@ -20,6 +20,6 @@
   <% end %>
 
   <p>
-    <%= f.submit 'Next' %>
+    <%= f.submit t('.buttons.submit') %>
   </p>
 <% end %>

@@ -1,0 +1,59 @@
+en:
+  activerecord:
+    models:
+      user: 'User'
+      admin: 'Admin'
+      test: 'Test'
+      question: 'Question'
+      answer: 'Answer'
+
+    attributes:
+      user:
+        first_name: 'First name'
+        last_name: 'Last name'
+        email: 'Email'
+        password: 'Password'
+        password_confirmation: 'Password confirmation'
+        remember_me: 'Remember me'
+      test:
+        title: 'Title'
+        level: 'Level'
+        category: 'Category'
+        category_id: 'Category'
+        author: 'Author'
+      question:
+        body: 'Text'
+        test_id: 'Test'
+      answer:
+        body: 'Text'
+        correct: 'Correct'
+        question_id: 'Question'
+
+    errors:
+      models:
+        test:
+          attributes:
+            title:
+              blank: "can't be blank"
+              taken: 'has already been taken'
+            category_id:
+              required: 'must exist'
+            author_id:
+              required: 'must exist'
+            level:
+              greater_than: 'must be greater than %{count}'
+              not_an_integer: 'must be an integer'
+        question:
+          attributes:
+            body:
+              blank: "can't be blank"
+            test_id:
+              required: 'must exist'
+        answer:
+          attributes:
+            body:
+              blank: "can't be blank"
+            question_id:
+              required: 'must exist'
+            base:
+              too_much: 'Answer limit reached for this question'

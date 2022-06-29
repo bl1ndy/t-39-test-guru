@@ -1,5 +1,5 @@
 <p>
   <%= test.title %> level: <%= test.level %>
-  (<%= pluralize(test.questions.count, 'question') %>)
-  <%= button_to 'start', start_test_path(test) %>
+  (<%= t('.question', count: test.questions.count) %>)
+  <%= button_to t('.buttons.start'), start_test_path(test) %>
 </p>
