@@ -31,6 +31,15 @@ ru:
 
     errors:
       models:
+        user:
+          attributes:
+            email:
+              blank: 'должна быть указана'
+              invalid: 'имеет неверный формат'
+            first_name:
+              blank: 'должно быть указано'
+            last_name:
+              blank: 'должна быть указана'
         test:
           attributes:
             title:

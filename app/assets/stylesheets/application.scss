@@ -1,2 +1,10 @@
 @import 'bootstrap';
 @import 'test_passage';
+
+.alert-notice {
+  @extend .alert-info
+}
+
+.alert-alert {
+  @extend .alert-danger
+}
