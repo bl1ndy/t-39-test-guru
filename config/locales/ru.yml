@@ -128,6 +128,8 @@ ru:
       header: 'Прохождение %{title} Теста'
       buttons:
         submit: 'Следующий'
+      links:
+        gist: 'Сохранить Вопрос в Gist'
     result:
       header: 'Результаты %{title} Теста:'
       corrects: 'Правильных ответов: %{correct_questions} из %{questions_count}'
@@ -135,6 +137,9 @@ ru:
       failed: 'Тест провален! Попробуйте снова.'
       links:
         back: 'Назад'
+    gist:
+      success: 'Gist успешно сохранен!'
+      failed: 'Произошла ошибка в процессе сохранения Gist'
 
   shared:
     errors:
@@ -162,3 +167,8 @@ ru:
   tests_mailer:
     completed_test:
       subject: 'Вы только что прошли TestGuru Тест!'
+
+  services:
+    gist_question_service:
+      gist_params:
+        description: 'Вопрос о %{test_title} из TestGuru'
