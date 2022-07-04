@@ -1,5 +1,14 @@
-<p>
-  <%= test.title %> level: <%= test.level %>
-  (<%= t('.question', count: test.questions.count) %>)
-  <%= button_to t('.buttons.start'), start_test_path(test) %>
-</p>
+<div class="card my-3">
+  <div class="card-body">
+    <h2 class="card-title">
+      <%= test.title %>
+    </h2>
+
+    <h3 class="card-subtitle mb-2 text-muted">
+      <%= t('.level') %> <%= test.level %>
+      (<%= t('.question', count: test.questions.count) %>)
+    </h3>
+
+    <%= button_to t('.buttons.start'), start_test_path(test), class: 'btn btn-info' %>
+  </div>
+</div>

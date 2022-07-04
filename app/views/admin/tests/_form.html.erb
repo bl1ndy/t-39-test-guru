@@ -1,24 +1,24 @@
 <%= form_with(model: [:admin, @test], local: true) do |f| %>
   <%= render 'shared/errors', object: f.object %>
 
-  <p>
+  <div class="mb-3">
     <%= f.label :title %>
-    <%= f.text_field :title %>
-  </p>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
 
-  <p>
+  <div class="mb-3">
     <%= f.label :level%>
-    <%= f.number_field :level %>
-  </p>
+    <%= f.number_field :level, class: 'form-control' %>
+  </div>
 
-  <p>
+  <div class="mb-3">
     <%= f.label :category_id %>
-    <%= f.collection_select :category_id, Category.all, :id, :title, prompt: true %>
-  </p>
+    <%= f.collection_select :category_id, Category.all, :id, :title, { prompt: true }, { class: 'form-select' } %>
+  </div>
 
-  <p>
-    <%= f.submit button_text %>
-  </p>
+  <%= f.submit button_text, class: 'btn btn-primary' %>
+
+  <%= link_to t('.links.back'), admin_tests_path, class: 'btn btn-secondary' %>
 <% end %>
 
-<%= link_to t('.links.back'), admin_tests_path %>
+

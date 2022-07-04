@@ -1,8 +1,14 @@
-<hr/>
-<p>
-  <%= current_year %> &copy; <%= author %>,
-  <%= github_url(author, repo) %>
-</p>
-<p>
-  <%= link_to t('.links.thinknetica'), 'https://thinknetica.com/', target: '_blank' %>
-</p>
+<footer class="mt-auto bg-dark py-3 text-white text-lg-start">
+  <div class="d-flex justify-content-center">
+    <%= current_year %> &copy; <%= author %>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <%= github_url(author, repo) %>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <%= link_to t('.links.thinknetica'), 'https://thinknetica.com/',
+                target: '_blank', class: 'text-yellow-200 text-decoration-none' %>
+  </div>
+</footer>

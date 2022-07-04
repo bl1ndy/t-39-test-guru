@@ -105,7 +105,7 @@ en:
     home:
       header: "Let's pass some tests!"
       links:
-        tests: 'Tests'
+        tests: 'Get Tests'
 
   tests:
     index:
@@ -115,6 +115,7 @@ en:
         zero: '%{count} questions'
         one: '%{count} question'
         other: '%{count} questions'
+      level: 'Level'
       buttons:
         start: 'Start'
 

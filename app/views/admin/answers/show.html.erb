@@ -1,13 +1,13 @@
-<h3>
+<h1 class="mb-4">
   <%= t('.question') %>: <%= @answer.question.body %>
-</h3>
+</h1>
 
-<p>
+<div class="mb-4">
   <b><%= t('.answer') %></b>: <%= @answer.body %>
-</p>
+</div>
 
-<p>
+<div class="mb-4">
   <b><%= t('.correct') %></b>: <%= @answer.correct%>
-</p>
+</div>
 
-<%= link_to t('.links.back'), admin_question_path(@answer.question) %>
+<%= link_to t('.links.back'), admin_question_path(@answer.question), class: 'btn btn-secondary' %>

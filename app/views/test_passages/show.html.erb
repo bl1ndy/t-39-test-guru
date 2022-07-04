@@ -1,8 +1,8 @@
-<h1>
+<h1 class="mb-4">
   <%= t('.header', title: @test.title) %>
 </h1>
 
-<h3>
+<h3 class="mb-4">
   (<%= current_question_number(@test_passage.current_question)%> / <%= @test.questions.count %>)
   <%= @test_passage.current_question.body %>
 </h3>
@@ -13,13 +13,13 @@
                                :id,
                                :body,
                                include_hidden: false do |b| %>
-    <p>
-      <%= b.check_box %>
-      <%= b.label %>
-    </p>
+    <div class="mb-3 row">
+      <div class="form-check">
+        <%= b.check_box %>
+        <%= b.label %>
+      </div>
+    </div>
   <% end %>
 
-  <p>
-    <%= f.submit t('.buttons.submit') %>
-  </p>
+  <%= f.submit t('.buttons.submit'), class: 'btn btn-primary' %>
 <% end %>

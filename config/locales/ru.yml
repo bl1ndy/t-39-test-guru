@@ -107,7 +107,7 @@ ru:
     home:
       header: "Время пройти тесты!"
       links:
-        tests: 'Тесты'
+        tests: 'Перейти к тестам'
 
   tests:
     index:
@@ -119,6 +119,7 @@ ru:
         few: '%{count} вопроса'
         many: '%{count} вопросов'
         other: '%{count} вопросов'
+      level: 'Уровень'
       buttons:
         start: 'Начать'
 

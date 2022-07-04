@@ -6,7 +6,8 @@ module ApplicationHelper
   end
 
   def github_url(author, repo)
-    link_to 'TestGuru', "https://github.com/#{author}/#{repo}", target: '_blank', rel: 'noopener'
+    link_to 'TestGuru', "https://github.com/#{author}/#{repo}",
+            target: '_blank', rel: 'noopener', class: 'text-yellow-200 text-decoration-none'
   end
 
   def flash_message

@@ -1,23 +1,25 @@
-<h2>
+<h2 class="mb-4">
   <%= @answer.question.body %>
 </h2>
 
 <%= form_with(model: [:admin, @question, @answer], local: true) do |f| %>
   <%= render 'shared/errors', object: f.object %>
 
-  <p>
+  <div class="mb-3">
     <%= f.label :body %>
-    <%= f.text_area :body, size: '50x5' %>
-  </p>
+    <%= f.text_area :body, size: '50x5', class: 'form-control' %>
+  </div>
 
-  <p>
-    <%= f.check_box :correct %>
-    <%= f.label :correct %>
-  </p>
+  <div class="mb-3">
+    <div class="form-check">
+      <%= f.check_box :correct %>
+      <%= f.label :correct %>
+    </div>
+  </div>
 
-  <p>
-    <%= f.submit button_text %>
-  </p>
+  <%= f.submit button_text, class: 'btn btn-primary' %>
+
+  <%= link_to t('.links.back'), admin_question_path(@answer.question), class: 'btn btn-secondary' %>
 <% end %>
 
-<%= link_to t('.links.back'), admin_question_path(@answer.question) %>
+

@@ -1,16 +1,18 @@
-<h1>
+<h1 class="mb-4">
   <%= question_header(@question) %>
 </h1>
 
 <%= form_with(model: [:admin, @test, @question], local: true) do |f| %>
   <%= render 'shared/errors', object: f.object %>
-  <p>
+
+  <div class="mb-3">
     <%= f.label :body %>
-    <%= f.text_field :body %>
-  </p>
-  <p>
-    <%= f.submit button_text %>
-  </p>
+    <%= f.text_field :body, class: 'form-control' %>
+  </div>
+
+  <%= f.submit button_text, class: 'btn btn-primary' %>
+
+  <%= link_to t('.links.back'), admin_test_path(@question.test), class: 'btn btn-secondary' %>
 <% end %>
 
-<%= link_to t('.links.back'), admin_test_path(@question.test) %>
+

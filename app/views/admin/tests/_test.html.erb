@@ -1,5 +1,12 @@
-<p>
-  <%= link_to test.title, admin_test_path(test) %>
-  <%= t('.level') %>: <%= test.level %>
-  (<%= t('.question', count: test.questions.count) %>)
-</p>
+<div class="card my-3">
+  <div class="card-body">
+    <h2 class="card-title">
+      <%= link_to test.title, admin_test_path(test) %>
+    </h2>
+
+    <h3 class="card-subtitle mb-2 text-muted">
+      <%= t('.level') %>: <%= test.level %>
+      (<%= t('.question', count: test.questions.count) %>)
+    </h3>
+  </div>
+</div>
