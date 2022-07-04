@@ -1,9 +1,15 @@
-<li>
-  <%= answer.body %><br/>
-  <%= link_to t('.links.show'), admin_answer_path(answer) %> |
-  <%= link_to t('.links.edit'), edit_admin_answer_path(answer) %> |
+<li class="list-group-item">
+  <b>
+    <%= answer.body %>
+  </b>
+
+  <br/>
+
+  <%= link_to t('.links.show'), admin_answer_path(answer), class: 'btn btn-sm btn-dark' %>
+  <%= link_to t('.links.edit'), edit_admin_answer_path(answer), class: 'btn btn-sm btn-info' %>
   <%= link_to t('.links.destroy'),
               admin_answer_path(answer),
               method: :delete,
-              data: { confirm: t('.links.confirm') } %>
+              data: { confirm: t('.links.confirm') },
+              class: 'btn btn-sm btn-danger' %>
 </li>
