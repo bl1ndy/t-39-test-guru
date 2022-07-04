@@ -1,7 +1,9 @@
-<h1>
+<h1 class="mb-4">
   <%= t('.header') %>
 </h1>
 
-<%= link_to t('.links.new'), new_admin_test_path %>
+<%= link_to t('.links.new'), new_admin_test_path, class: 'btn btn-primary' %>
 
-<%= render @tests %>
+<div class="mt-3">
+  <%= render @tests %>
+</div>

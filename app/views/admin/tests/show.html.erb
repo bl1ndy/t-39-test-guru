@@ -1,18 +1,16 @@
-<h1>
+<h1 class="mb-4">
   <%= @test.title %> - <%= t('.level') %>: <%= @test.level %>
 </h1>
 
-<p>
-  <%= link_to t('.links.edit'), edit_admin_test_path(@test) %> |
-  <%= link_to t('.links.destroy'), admin_test_path(@test),
-                         method: :delete, data: { confirm: t('.links.confirm') } %>
-</p>
+<%= link_to t('.links.edit'), edit_admin_test_path(@test), class: 'btn btn-info' %>
+<%= link_to t('.links.destroy'), admin_test_path(@test),
+            method: :delete, data: { confirm: t('.links.confirm') }, class: 'btn btn-danger' %>
 
-<h2>
+<h2 class="mt-3 mb-4">
   <%= t('.questions') %>
 </h2>
 
 <%= render @test.questions %>
 
-<%= link_to t('.links.new_question'), new_admin_test_question_path(@test) %> |
-<%= link_to t('.links.back'), admin_tests_path %>
+<%= link_to t('.links.new_question'), new_admin_test_question_path(@test), class: 'btn btn-sm btn-primary' %>
+<%= link_to t('.links.back'), admin_tests_path, class: 'btn btn-sm btn-secondary' %>
