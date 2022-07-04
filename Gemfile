@@ -7,6 +7,7 @@ ruby '3.1.2'
 
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'devise', '~> 4.8', '>= 4.8.1'
+gem 'faraday', '~> 2.3'
 gem 'jbuilder', '~> 2.7'
 gem 'net-smtp', require: false
 gem 'puma', '~> 5.0'
