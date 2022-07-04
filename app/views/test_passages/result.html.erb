@@ -1,17 +1,23 @@
-<h1>
+<h1 class="mb-4">
   <%= t('.header', title: @test.title) %>
 </h1>
 
-<p>
+<h4 class="mb-4">
   <%= t('.corrects', correct_questions: @test_passage.correct_questions,
                      questions_count: @test.questions.count) %>
-  (<span class="<%= @test_passage.passed? ? 'success-passage' : 'failed-passage' %>">
+  <span class="badge <%= @test_passage.passed? ? 'bg-success' : 'bg-danger' %>">
     <%= @test_passage.success_rate %>%
-  </span>)
-</p>
+  </span>
+</h4>
 
-<p>
-  <%= @test_passage.passed? ? t('.success') : t('.failed') %>
-</p>
+<% if @test_passage.passed? %>
+  <div class="alert alert-success">
+    <%= t('.success') %>
+  </div>
+<% else %>
+  <div class="alert alert-danger">
+    <%= t('.failed') %>
+  </div>
+<% end %>
 
-<%= link_to t('.links.back'), tests_path %>
+<%= link_to t('.links.back'), tests_path, class: 'btn btn-secondary' %>

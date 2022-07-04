@@ -15,9 +15,11 @@
   <body class="d-flex flex-column min-vh-100">
     <%= render 'shared/menu' %>
 
-    <%== flash_message %>
+    <main class="container mt-3">
+      <%== flash_message %>
 
-    <%= yield %>
+      <%= yield %>
+    </main>
 
     <%= render 'layouts/footer', author: 'bl1ndy', repo: 't-39-test-guru' %>
   </body>
