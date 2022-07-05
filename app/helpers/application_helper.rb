@@ -12,7 +12,11 @@ module ApplicationHelper
 
   def flash_message
     flash.map do |message_type, message|
-      content_tag(:div, message, class: "alert alert-#{message_type}")
+      content_tag(
+        :div,
+        sanitize(message, attributes: %w[href target]),
+        class: "alert alert-#{message_type}"
+      )
     end.join
   end
 end

@@ -100,6 +100,14 @@ en:
           edit: 'Edit'
           destroy: 'Delete'
           confirm: 'Are you sure?'
+    gists:
+      index:
+        header: 'Created Gists'
+        table:
+          id: 'ID'
+          question: 'Question'
+          link: 'Link to Github'
+          email: 'Author email'
 
   pages:
     home:
@@ -124,6 +132,8 @@ en:
       header: 'Passing the %{title} Test'
       buttons:
         submit: 'Next'
+      links:
+        gist: 'Gist Question'
     result:
       header: '%{title} Test results:'
       corrects: 'Correct questions: %{correct_questions} from %{questions_count}'
@@ -131,6 +141,9 @@ en:
       failed: 'Test failed! Try again.'
       links:
         back: 'Back'
+    gist:
+      success: 'Gist successfully saved! Go <a href="%{link}" target="_blank">this link</a> to see Gist.'
+      failed: 'An error occurred while saving Gist.'
 
   shared:
     errors:
@@ -156,3 +169,8 @@ en:
   tests_mailer:
     completed_test:
       subject: 'You just completed TestGuru Test!'
+
+  services:
+    gist_question_service:
+      gist_params:
+        description: 'A question about %{test_title} from TestGuru'

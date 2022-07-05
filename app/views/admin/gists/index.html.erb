@@ -1,0 +1,20 @@
+<h1 class="mb-4">
+  <%= t('.header') %>
+</h1>
+
+<div class="table-responsive">
+  <table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col"><%= t('.table.id') %></th>
+        <th scope="col"><%= t('.table.question') %></th>
+        <th scope="col"><%= t('.table.link') %></th>
+        <th scope="col"><%= t('.table.email') %></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= render @gists %>
+    </tbody>
+  </table>
+</div>
