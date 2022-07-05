@@ -138,7 +138,7 @@ ru:
       links:
         back: 'Назад'
     gist:
-      success: 'Gist успешно сохранен!'
+      success: 'Gist успешно сохранен! Пройдите по <a href="%{link}" target="_blank">этой ссылке</a> чтобы ознакомиться с Gist.'
       failed: 'Произошла ошибка в процессе сохранения Gist'
 
   shared:

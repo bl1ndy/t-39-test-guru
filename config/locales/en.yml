@@ -134,7 +134,7 @@ en:
       links:
         back: 'Back'
     gist:
-      success: 'Gist successfully saved!'
+      success: 'Gist successfully saved! Go <a href="%{link}" target="_blank">this link</a> to see Gist.'
       failed: 'An error occurred while saving Gist.'
 
   shared:

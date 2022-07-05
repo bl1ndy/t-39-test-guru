@@ -10,6 +10,7 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'faraday', '~> 2.3'
 gem 'jbuilder', '~> 2.7'
 gem 'net-smtp', require: false
+gem 'octokit', '~> 4.25', '>= 4.25.1'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 6.1.6'
 gem 'rails-i18n', '~> 7.0', '>= 7.0.3'
