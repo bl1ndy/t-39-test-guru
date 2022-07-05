@@ -22,11 +22,11 @@ class TestPassagesController < ApplicationController
 
   def gist
     client = Octokit::Client.new(access_token: ENV.fetch('GITHUB_ACCESS_TOKEN', nil))
-    result = GistQuestionService.new(@test_passage.current_question, client).call
-    status = client.last_response.status
+    service = GistQuestionService.new(@test_passage.current_question, client)
+    result = service.call
     gist_url = result.html_url
 
-    flash_options = status == 201 ? { notice: t('.success', link: gist_url) } : { danger: t('.failed') }
+    flash_options = service.success? ? { notice: t('.success', link: gist_url) } : { danger: t('.failed') }
 
     save_gist(gist_url)
 
@@ -44,7 +44,7 @@ class TestPassagesController < ApplicationController
   end
 
   def save_gist(gist_url)
-    @test_passage.current_question.gists.create!(
+    @test_passage.current_question.gists.create(
       user_id: @test_passage.user.id,
       url: gist_url
     )
