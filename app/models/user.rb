@@ -16,6 +16,7 @@ class User < ApplicationRecord
            inverse_of: :author
   has_many :test_passages, dependent: nil
   has_many :tests, through: :test_passages
+  has_many :gists, dependent: nil
 
   validates :first_name, :last_name, presence: true, length: { maximum: 255 }
 

@@ -102,6 +102,14 @@ ru:
           edit: 'Редактировать'
           destroy: 'Удалить'
           confirm: 'Вы уверены?'
+    gists:
+      index:
+        header: 'Созданные Gist'
+        table:
+          id: 'ID'
+          question: 'Вопрос'
+          link: 'Ссылка на Github'
+          email: 'Почта Автора'
 
   pages:
     home:

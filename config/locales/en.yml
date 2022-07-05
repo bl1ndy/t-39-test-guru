@@ -100,6 +100,14 @@ en:
           edit: 'Edit'
           destroy: 'Delete'
           confirm: 'Are you sure?'
+    gists:
+      index:
+        header: 'Created Gists'
+        table:
+          id: 'ID'
+          question: 'Question'
+          link: 'Link to Github'
+          email: 'Author email'
 
   pages:
     home:
