@@ -5,6 +5,10 @@ en:
     tests:
       index:
         header: 'Available Tests'
+        table:
+          title: 'Title'
+          level: 'Level'
+          questions_count: 'Questions count'
         links:
           new: 'New Test'
       new:
@@ -118,6 +122,11 @@ en:
   tests:
     index:
       header: 'Available Tests'
+      table:
+        title: 'Title'
+        level: 'Level'
+        questions_count: 'Questions count'
+        actions: 'Actions'
     test:
       question:
         zero: '%{count} questions'

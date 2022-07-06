@@ -9,12 +9,12 @@
     <thead class="table-dark">
     <tr>
       <th scope="col" class="sort-by-title pointer">
-        Title
+        <%= t('.table.title') %>
         <%= octicon 'arrow-up', class: 'text-white hide' %>
         <%= octicon 'arrow-down', class: 'text-white hide' %>
       </th>
-      <th scope="col">Level</th>
-      <th scope="col">Questions</th>
+      <th scope="col"><%= t('.table.level') %></th>
+      <th scope="col"><%= t('.table.questions_count') %></th>
     </tr>
     </thead>
 

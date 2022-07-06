@@ -5,6 +5,10 @@ ru:
     tests:
       index:
         header: 'Доступные Тесты'
+        table:
+          title: 'Название'
+          level: 'Уровень'
+          questions_count: 'Количество вопросов'
         links:
           new: 'Новый Тест'
       new:
@@ -120,6 +124,11 @@ ru:
   tests:
     index:
       header: 'Доступные Тесты'
+      table:
+        title: 'Название'
+        level: 'Уровень'
+        questions_count: 'Количество вопросов'
+        actions: 'Действия'
     test:
       question:
         zero: '%{count} вопросов'

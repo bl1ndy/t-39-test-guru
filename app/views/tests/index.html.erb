@@ -2,4 +2,23 @@
   <%= t('.header') %>
 </h1>
 
-<%= render @tests %>
+<div class="table-responsive mt-4">
+  <table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col" class="sort-by-title pointer">
+          <%= t('.table.title') %>
+          <%= octicon 'arrow-up', class: 'text-white hide' %>
+          <%= octicon 'arrow-down', class: 'text-white hide' %>
+        </th>
+        <th scope="col"><%= t('.table.level') %></th>
+        <th scope="col"><%= t('.table.questions_count') %></th>
+        <th scope="col"><%= t('.table.actions') %></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= render @tests %>
+    </tbody>
+  </table>
+</div>
