@@ -1,11 +1,11 @@
 /**** Extend Devise alerts with Bootstrap ****/
 
 .alert-notice {
-  @extend .alert-info
+  @extend .alert-info !optional;
 }
 
 .alert-alert {
-  @extend .alert-danger
+  @extend .alert-danger !optional;
 }
 
 /**** Sort ****/
@@ -15,5 +15,5 @@
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
