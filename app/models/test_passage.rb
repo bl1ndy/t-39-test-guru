@@ -22,6 +22,11 @@ class TestPassage < ApplicationRecord
     current_question.nil?
   end
 
+  def current_progress
+    passed_questions_count = test.questions.order(:id).index(current_question)
+    (passed_questions_count.to_f / test.questions.count * 100).round
+  end
+
   def success_rate
     (correct_questions.to_f / test.questions.count * 100).round
   end

@@ -1,13 +1,13 @@
-<% if object.errors.any? %>
-  <div id="error_explanation">
+<% if object.present? && object.errors.any? %>
+  <%= content_tag :div, id: 'error_explanation', class: 'object-errors', data: { object_id: object.id } do %>
     <div class="alert alert-danger">
       <%= t('.message', count: object.errors.count) %>.
     </div>
-  </div>
 
-  <ul>
-    <% object.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
+    <ul>
+      <% object.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
 <% end %>

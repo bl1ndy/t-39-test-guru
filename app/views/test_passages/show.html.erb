@@ -2,6 +2,15 @@
   <%= t('.header', title: @test.title) %>
 </h1>
 
+<div class="progress mb-4">
+  <div
+      class="progress-bar bg-primary" role="progressbar"
+      style="width: <%= @test_passage.current_progress %>%"
+      aria-valuenow="<%= @test_passage.current_progress %>"
+      aria-valuemin="0" aria-valuemax="100">
+  </div>
+</div>
+
 <h3 class="mb-4">
   (<%= current_question_number(@test_passage.current_question)%> / <%= @test.questions.count %>)
   <%= @test_passage.current_question.body %>

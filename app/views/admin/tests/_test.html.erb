@@ -1,5 +1,23 @@
-<tr>
-  <td><%= link_to test.title, admin_test_path(test) %></td>
+<tr class="align-middle">
+  <td>
+    <%= content_tag :span, test.title, class: 'test-title', data: { test_id: test.id }  %>
+    <%= render 'form_inline', test: test == @test ? @test : test %>
+  </td>
   <td><%= test.level %></td>
   <td><%= test.questions.count %></td>
+  <td>
+    <%= link_to octicon('eye', class: 'align-middle'), admin_test_path(test), class: 'btn btn-secondary' %>
+    <%= link_to octicon('pencil', class: 'align-middle'),
+                edit_admin_test_path(test),
+                data: { test_id: test.id },
+                class: 'form-inline-link btn btn-info',
+                id: 'edit-link' %>
+    <%= link_to octicon('x-circle', class: 'align-middle'),
+                edit_admin_test_path(test),
+                data: { test_id: test.id },
+                class: 'form-inline-link btn btn-warning hide',
+                id: 'cancel-link' %>
+    <%= link_to octicon('trash', class: 'align-middle'), admin_test_path(test),
+                method: :delete, data: { confirm: t('.links.confirm') }, class: 'btn btn-danger' %>
+  </td>
 </tr>

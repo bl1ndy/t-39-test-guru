@@ -2,7 +2,9 @@
   <%= t('.header') %>
 </h1>
 
-<%= link_to t('.links.new'), new_admin_test_path, class: 'btn btn-primary' %>
+<%= link_to t('.links.new'), new_admin_test_path, class: 'btn btn-primary mb-3' %>
+
+<%= render 'shared/errors', object: @test %>
 
 <div class="table-responsive mt-4">
   <table class="table">
@@ -15,6 +17,7 @@
       </th>
       <th scope="col"><%= t('.table.level') %></th>
       <th scope="col"><%= t('.table.questions_count') %></th>
+      <th scope="col"><%= t('.table.actions') %></th>
     </tr>
     </thead>
 

@@ -9,8 +9,11 @@ en:
           title: 'Title'
           level: 'Level'
           questions_count: 'Questions count'
+          actions: 'Actions'
         links:
           new: 'New Test'
+      form_inline:
+        update: 'OK'
       new:
         header: 'New Test'
         buttons:
@@ -42,6 +45,8 @@ en:
           one: '%{count} question'
           other: '%{count} questions'
         level: 'Level'
+        links:
+          confirm: 'Are you sure?'
     questions:
       new:
         buttons:
