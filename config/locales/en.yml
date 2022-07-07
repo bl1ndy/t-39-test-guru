@@ -45,6 +45,8 @@ en:
           one: '%{count} question'
           other: '%{count} questions'
         level: 'Level'
+        links:
+          confirm: 'Are you sure?'
     questions:
       new:
         buttons:

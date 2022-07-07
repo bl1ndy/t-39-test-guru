@@ -10,7 +10,13 @@
     <%= link_to octicon('pencil', class: 'align-middle'),
                 edit_admin_test_path(test),
                 data: { test_id: test.id },
-                class: 'form-inline-link btn btn-info' %>
+                class: 'form-inline-link btn btn-info',
+                id: 'edit-link' %>
+    <%= link_to octicon('x-circle', class: 'align-middle'),
+                edit_admin_test_path(test),
+                data: { test_id: test.id },
+                class: 'form-inline-link btn btn-warning hide',
+                id: 'cancel-link' %>
     <%= link_to octicon('trash', class: 'align-middle'), admin_test_path(test),
                 method: :delete, data: { confirm: t('.links.confirm') }, class: 'btn btn-danger' %>
   </td>

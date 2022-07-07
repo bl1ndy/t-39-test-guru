@@ -23,20 +23,20 @@ const formInlineLinkHandler = function(event) {
 }
 
 const formInlineHandler = function(testId) {
-  let editIcon = document.querySelector('.octicon-pencil')
-  let link = document.querySelector('.form-inline-link[data-test-id="' + testId + '"]')
+  let editLink = document.querySelector('#edit-link[data-test-id="' + testId + '"]')
+  let cancelLink = document.querySelector('#cancel-link[data-test-id="' + testId + '"]')
   let testTitle = document.querySelector('.test-title[data-test-id="' + testId + '"]')
   let formInline = document.querySelector('.form-inline[data-test-id="' + testId + '"]')
 
   if (formInline.classList.contains('hide')) {
     testTitle.classList.add('hide')
     formInline.classList.remove('hide')
-    editIcon.classList.replace('octicon-pencil', 'octicon-x-circle')
-    link.innerHTML = 'Cancel'
+    editLink.classList.add('hide')
+    cancelLink.classList.remove('hide')
   } else {
     testTitle.classList.remove('hide')
     formInline.classList.add('hide')
-    editIcon.classList.replace('octicon-x-circle', 'octicon-pencil')
-    link.innerHTML = editIcon.outerHTML
+    cancelLink.classList.add('hide')
+    editLink.classList.remove('hide')
   }
 }

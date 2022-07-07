@@ -47,6 +47,8 @@ ru:
           many: '%{count} вопросов'
           other: '%{count} вопросов'
         level: 'Уровень'
+        links:
+          confirm: 'Вы уверены?'
     questions:
       new:
         buttons:
