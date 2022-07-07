@@ -9,8 +9,11 @@ ru:
           title: 'Название'
           level: 'Уровень'
           questions_count: 'Количество вопросов'
+          actions: 'Действия'
         links:
           new: 'Новый Тест'
+      form_inline:
+        update: 'OK'
       new:
         header: 'Новый Тест'
         buttons:
