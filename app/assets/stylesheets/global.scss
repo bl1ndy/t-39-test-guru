@@ -1,0 +1,19 @@
+/**** Extend Devise alerts with Bootstrap ****/
+
+.alert-notice {
+  @extend .alert-info !optional;
+}
+
+.alert-alert {
+  @extend .alert-danger !optional;
+}
+
+/**** Sort ****/
+
+.pointer {
+  cursor: pointer;
+}
+
+.hide {
+  display: none !important;
+}
