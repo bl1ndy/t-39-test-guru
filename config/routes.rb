@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
 
+  get :contacts, to: 'contacts#new'
+  post :contacts, to: 'contacts#send_form'
+
   devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout },
                      controllers: { registrations: 'registrations', sessions: 'sessions' }
 

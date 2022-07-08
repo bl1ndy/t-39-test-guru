@@ -163,6 +163,16 @@ ru:
       success: 'Gist успешно сохранен! Пройдите по <a href="%{link}" target="_blank">этой ссылке</a> чтобы ознакомиться с Gist.'
       failed: 'Произошла ошибка в процессе сохранения Gist'
 
+  contacts:
+    new:
+      header: 'Отправьте нам сообщение'
+      message: 'Сообщение'
+      buttons:
+        send: 'Отправить'
+    send_form:
+      success: 'Ваше сообщение успешно отправлено!'
+      failed: 'Пожалуйста, напишите свое сообщение.'
+
   shared:
     errors:
       message:
@@ -184,11 +194,16 @@ ru:
       title: 'TestGuru'
     footer:
       links:
+        contacts: 'Связаться с нами'
         thinknetica: 'Учебный проект в онлайн-школе Thinknetica'
 
   tests_mailer:
     completed_test:
       subject: 'Вы только что прошли TestGuru Тест!'
+
+  contacts_mailer:
+    send_form:
+      subject: 'Получено новое сообщение с сайта TestGuru'
 
   services:
     gist_question_service:

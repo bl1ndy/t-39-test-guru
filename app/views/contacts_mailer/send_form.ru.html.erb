@@ -1,0 +1,14 @@
+<h1>Test Guru Контакты</h1>
+
+<h4>
+  Вы получили сообщение от <<%= @user.email %>>
+</h4>
+
+<p>
+  <b>Имя:</b> <%= @user.first_name %>
+  <b>Фамилия:</b> <%= @user.last_name %>
+</p>
+
+<p>
+  Сообщение: <%= sanitize(@message) %>
+</p>
