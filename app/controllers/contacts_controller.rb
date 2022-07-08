@@ -3,25 +3,20 @@
 class ContactsController < ApplicationController
   def new; end
 
-  # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
-  def send_form
-    @form = {
-      user: current_user,
-      message: params.dig(:contact_form, :message)
-    }
+  def create
+    user_message = params.dig(:contact_form, :message)
 
-    if valid?(@form[:message])
-      ContactsMailer.send_form(@form).deliver_now
+    if valid?(user_message)
+      ContactsMailer.send_form(user: current_user, message: user_message).deliver_now
 
       flash[:success] = t('.success')
-      redirect_to contacts_path
+      redirect_to new_contact_path
     else
       flash.now[:danger] = t('.failed')
 
       render :new
     end
   end
-  # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
 
   private
 

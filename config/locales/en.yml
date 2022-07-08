@@ -165,7 +165,7 @@ en:
       message: 'Message'
       buttons:
         send: 'Send'
-    send_form:
+    create:
       success: 'Yor message successfully sent!'
       failed: 'Please enter your message.'
 

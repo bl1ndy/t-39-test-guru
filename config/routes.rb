@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
 
-  get :contacts, to: 'contacts#new'
-  post :contacts, to: 'contacts#send_form'
-
   devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout },
                      controllers: { registrations: 'registrations', sessions: 'sessions' }
 
@@ -19,6 +16,8 @@ Rails.application.routes.draw do
       post :gist
     end
   end
+
+  resources :contacts, only: %i[new create]
 
   namespace :admin do
     resources :tests do

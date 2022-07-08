@@ -1,4 +1,4 @@
-Admin.create(
+admin = Admin.create(
   email: 'admin@test.com',
   first_name: "Admin",
   last_name: "Test",
@@ -10,11 +10,11 @@ Admin.create(
 backend = Category.create(title: 'Backend')
 frontend = Category.create(title: 'Frontend')
 
-ruby = backend.tests.create(title: 'Ruby', level: 2, author_id: 1)
-go = backend.tests.create(title: 'Go', level: 3, author_id: 1)
-elixir = backend.tests.create(title: 'Elixir', level: 3, author_id: 1)
-html = frontend.tests.create(title: 'HTML', level: 1, author_id: 1)
-js = frontend.tests.create(title: 'JS', level: 2, author_id: 1)
+ruby = backend.tests.create(title: 'Ruby', level: 2, author: admin)
+go = backend.tests.create(title: 'Go', level: 3, author: admin)
+elixir = backend.tests.create(title: 'Elixir', level: 3, author: admin)
+html = frontend.tests.create(title: 'HTML', level: 1, author: admin)
+js = frontend.tests.create(title: 'JS', level: 2, author: admin)
 
 ruby_question1 = ruby.questions.create(body: 'What is a difference between class and module?')
 ruby_question2 = ruby.questions.create(body: 'What is a Rubocop?')
