@@ -4,7 +4,7 @@ class Test < ApplicationRecord
   belongs_to :category
   belongs_to :author, class_name: 'User'
   has_many :questions, dependent: :destroy
-  has_many :test_passages, dependent: nil
+  has_many :test_passages, dependent: :destroy
   has_many :users, through: :test_passages
 
   validates :title, presence: true
@@ -21,6 +21,10 @@ class Test < ApplicationRecord
       by_category(category)
         .order(title: :desc)
         .pluck(:title)
+    end
+
+    def with_questions
+      all.reject { |test| test.questions.count.zero? }
     end
   end
 end
