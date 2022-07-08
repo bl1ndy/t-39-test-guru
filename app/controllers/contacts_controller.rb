@@ -13,7 +13,7 @@ class ContactsController < ApplicationController
     if valid?(@form[:message])
       ContactsMailer.send_form(@form).deliver_now
 
-      flash.now[:success] = t('.success')
+      flash[:success] = t('.success')
       redirect_to contacts_path
     else
       flash.now[:danger] = t('.failed')
