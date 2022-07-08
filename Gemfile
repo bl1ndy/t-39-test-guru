@@ -43,5 +43,6 @@ group :test do
 end
 
 group :production do
+  gem 'net-pop', '~> 0.1.1'
   gem 'pg', '~> 1.4', '>= 1.4.1'
 end
