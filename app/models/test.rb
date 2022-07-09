@@ -11,6 +11,7 @@ class Test < ApplicationRecord
   validates :level, numericality: { only_integer: true, greater_than: 0 }
   validates :title, uniqueness: { scope: :level }
 
+  scope :published, -> { where(published: true) }
   scope :easy, -> { where(level: 0..1) }
   scope :medium, -> { where(level: 2..4) }
   scope :hard, -> { where(level: 5..Float::INFINITY) }
@@ -21,10 +22,6 @@ class Test < ApplicationRecord
       by_category(category)
         .order(title: :desc)
         .pluck(:title)
-    end
-
-    def with_questions
-      all.reject { |test| test.questions.count.zero? }
     end
   end
 end

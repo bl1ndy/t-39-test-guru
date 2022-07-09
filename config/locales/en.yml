@@ -9,6 +9,7 @@ en:
           title: 'Title'
           level: 'Level'
           questions_count: 'Questions count'
+          published: 'Published'
           actions: 'Actions'
         links:
           new: 'New Test'

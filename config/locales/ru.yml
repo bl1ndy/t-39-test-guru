@@ -9,6 +9,7 @@ ru:
           title: 'Название'
           level: 'Уровень'
           questions_count: 'Количество вопросов'
+          published: 'Опубликован'
           actions: 'Действия'
         links:
           new: 'Новый Тест'
