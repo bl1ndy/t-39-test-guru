@@ -1,0 +1,12 @@
+<h1 class="mb-4">
+  <%= t('.header') %>
+</h1>
+
+<%= form_with(scope: :contact_form, url: contacts_path, local: true) do |f| %>
+  <div class="mb-3">
+    <%= f.label :message, t('.message') %>
+    <%= f.text_area :message, size: "70x5", class: 'form-control' %>
+  </div>
+
+  <%= f.submit t('.buttons.send'), class: 'btn btn-primary' %>
+<% end %>

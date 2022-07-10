@@ -1,0 +1,9 @@
+Test Guru Contacts
+=======
+
+You received new message from <<%= @user.email %>>
+
+Name: <%= @user.first_name %>
+Last name: <%= @user.last_name %>
+
+Message: <%= sanitize(@message) %>

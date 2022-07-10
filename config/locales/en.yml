@@ -9,6 +9,7 @@ en:
           title: 'Title'
           level: 'Level'
           questions_count: 'Questions count'
+          published: 'Published'
           actions: 'Actions'
         links:
           new: 'New Test'
@@ -159,6 +160,16 @@ en:
       success: 'Gist successfully saved! Go <a href="%{link}" target="_blank">this link</a> to see Gist.'
       failed: 'An error occurred while saving Gist.'
 
+  contacts:
+    new:
+      header: 'Send us your message'
+      message: 'Message'
+      buttons:
+        send: 'Send'
+    create:
+      success: 'Yor message successfully sent!'
+      failed: 'Please enter your message.'
+
   shared:
     errors:
       message:
@@ -178,11 +189,16 @@ en:
       title: 'TestGuru'
     footer:
       links:
+        contacts: 'Contact with us'
         thinknetica: 'Educational project at Thinknetica online school'
 
   tests_mailer:
     completed_test:
       subject: 'You just completed TestGuru Test!'
+
+  contacts_mailer:
+    send_form:
+      subject: 'Received new message from TestGuru'
 
   services:
     gist_question_service:
