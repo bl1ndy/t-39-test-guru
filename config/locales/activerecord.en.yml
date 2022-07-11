@@ -1,71 +1,78 @@
 en:
   activerecord:
-    models:
-      user: 'User'
-      admin: 'Admin'
-      test: 'Test'
-      question: 'Question'
-      answer: 'Answer'
-      category: 'Category'
-      gist: 'Gist'
-      test_passage: 'Test Passage'
-      badge: 'Badge'
-
     attributes:
-      user:
-        first_name: 'First name'
-        last_name: 'Last name'
-        email: 'Email'
-        password: 'Password'
-        password_confirmation: 'Password confirmation'
-        remember_me: 'Remember me'
-      test:
-        title: 'Title'
-        level: 'Level'
-        category: 'Category'
-        category_id: 'Category'
-        author: 'Author'
-      question:
-        body: 'Text'
-        test_id: 'Test'
       answer:
         body: 'Text'
         correct: 'Correct'
         question_id: 'Question'
       badge:
-        title: 'Title'
-        rule: 'Rule'
         img_url: 'Image URL'
-
+        rule: 'Rule'
+        title: 'Title'
+      question:
+        body: 'Text'
+        test_id: 'Test'
+      test:
+        author: 'Author'
+        category: 'Category'
+        category_id: 'Category'
+        level: 'Level'
+        title: 'Title'
+      user:
+        email: 'Email'
+        first_name: 'First name'
+        last_name: 'Last name'
+        password: 'Password'
+        password_confirmation: 'Password confirmation'
+        remember_me: 'Remember me'
     errors:
       models:
-        test:
+        answer:
           attributes:
-            title:
+            base:
+              too_much: 'Answer limit reached for this question'
+            body:
               blank: "can't be blank"
-              taken: 'has already been taken'
-            category_id:
+            question_id:
               required: 'must exist'
-            author_id:
-              required: 'must exist'
-            level:
-              greater_than: 'must be greater than %{count}'
-              not_an_integer: 'must be an integer'
+        badge:
+          attributes:
+            img_url:
+              not_an_image: 'should contain only jpg(jpeg) or png image.'
         question:
           attributes:
             body:
               blank: "can't be blank"
             test_id:
               required: 'must exist'
-        answer:
+        test:
           attributes:
-            body:
-              blank: "can't be blank"
-            question_id:
+            author_id:
               required: 'must exist'
-            base:
-              too_much: 'Answer limit reached for this question'
-        badge:
+            category_id:
+              required: 'must exist'
+            level:
+              greater_than: 'must be greater than %{count}'
+              not_an_integer: 'must be an integer'
+            title:
+              blank: "can't be blank"
+              taken: 'has already been taken'
+        user:
           attributes:
-            img_url:
-              not_an_image: 'should contain only jpg(jpeg) or png image.'
+            email:
+              blank: "can't be blank"
+              invalid: 'is invalid'
+            first_name:
+              blank: "can't be blank"
+            last_name:
+              blank: "can't be blank"
+    models:
+      admin: 'Admin'
+      answer: 'Answer'
+      badge: 'Badge'
+      category: 'Category'
+      gist: 'Gist'
+      question: 'Question'
+      test: 'Test'
+      test_passage: 'Test Passage'
+      user: 'User'

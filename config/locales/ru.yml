@@ -1,225 +1,173 @@
 ru:
   admin:
+    answers:
+      answer:
+        links:
+          confirm: 'Вы уверены?'
+          destroy: 'Удалить'
+          edit: 'Редактировать'
+          show: 'Показать'
+      create:
+        success: 'Ответ успешно создан!'
+      destroy:
+        success: 'Ответ успешно удален!'
+      edit:
+        buttons:
+          update: 'Обновить'
+        header: 'Редактировать ответ'
+      form:
+        links:
+          back: 'Назад'
+      buttons:
+        create: 'Создать'
+      new:
+        header: 'Новый ответ'
+
+      show:
+        answer: 'Ответ'
+        correct: 'Верный'
+        links:
+          back: 'Назад'
+        question: 'Вопрос'
+      update:
+        success: 'Ответ успешно обновлен!'
+    badges:
+      badge:
+        links:
+          confirm: 'Вы уверены?'
+      create:
+        success: 'Бэйдж успешно создан!'
+      destroy:
+        success: 'Бэйдж успешно удален!'
+      edit:
+        buttons:
+          update: 'Обновить'
+        header: 'Редактировать Бэйдж'
+      form:
+        links:
+          back: 'Назад'
+      index:
+        header: 'Бэйджи'
+        links:
+          create: 'Новый Бэйдж'
+        table:
+          actions: 'Действия'
+          image: 'Изображение'
+          rule: 'Правило получения'
+          title: 'Название'
+      new:
+        buttons:
+          create: 'Создать'
+        header: 'Новый Бэйдж'
+      update:
+        success: 'Бэйдж успешно обновлен!'
     base:
       info: 'У вас нет прав на просмотр данной страницы'
-    tests:
+    gists:
       index:
-        header: 'Доступные Тесты'
+        header: 'Созданные Gist'
         table:
-          title: 'Название'
-          level: 'Уровень'
-          questions_count: 'Количество вопросов'
-          published: 'Опубликован'
-          actions: 'Действия'
-        links:
-          new: 'Новый Тест'
-      form_inline:
-        update: 'OK'
-      new:
-        header: 'Новый Тест'
-        buttons:
-          create: 'Создать'
-      create:
-        success: 'Тест успешно создан!'
-      show:
-        level: 'Уровень'
-        links:
-          edit: 'Редактировать'
-          destroy: 'Удалить'
-          confirm: 'Вы уверены?'
-          new_question: 'Новый вопрос'
-          back: 'Назад'
-        questions: 'Вопросы:'
-      edit:
-        header: 'Редактировать Тест'
-        buttons:
-          update: 'Обновить'
-      update:
-        success: 'Тест успешно обновлен!'
-      destroy:
-        success: 'Тест успешно удален!'
-      form:
-        links:
-          back: 'Назад'
-      test:
-        question:
-          one: '%{count} вопрос'
-          few: '%{count} вопроса'
-          many: '%{count} вопросов'
-          other: '%{count} вопросов'
-        level: 'Уровень'
-        links:
-          confirm: 'Вы уверены?'
+          email: 'Почта Автора'
+          id: 'ID'
+          link: 'Ссылка на Github'
+          question: 'Вопрос'
     questions:
-      new:
-        buttons:
-          create: 'Создать'
       create:
         success: 'Вопрос успешно создан!'
-      show:
-        question: 'Вопрос'
-        answers: 'Ответы:'
-        links:
-          new_answer: 'Новый ответ'
-          back: 'Назад'
+      destroy:
+        success: 'Вопрос успешно удален!'
       edit:
         buttons:
           update: 'Обновить'
-      update:
-        success: 'Вопрос успешно обновлен!'
-      destroy:
-        success: 'Вопрос успешно удален!'
       form:
         links:
           back: 'Назад'
-      question:
-        links:
-          edit: 'Редактировать'
-          destroy: 'Удалить'
-          confirm: 'Вы уверены?'
       helpers:
         question_header:
           base_header: '%{question_title} Вопрос'
           create: 'Создать новый %{base_header}'
           update: 'Редактировать %{base_header}'
-    answers:
       new:
-        header: 'Новый ответ'
         buttons:
           create: 'Создать'
-      create:
-        success: 'Ответ успешно создан!'
-      show:
-        question: 'Вопрос'
-        answer: 'Ответ'
-        correct: 'Верный'
-        links:
-          back: 'Назад'
-      edit:
-        header: 'Редактировать ответ'
-        buttons:
-          update: 'Обновить'
-      update:
-        success: 'Ответ успешно обновлен!'
-      destroy:
-        success: 'Ответ успешно удален!'
-      form:
-        links:
-          back: 'Назад'
-      answer:
-        links:
-          show: 'Показать'
-          edit: 'Редактировать'
-          destroy: 'Удалить'
-          confirm: 'Вы уверены?'
-    gists:
-      index:
-        header: 'Созданные Gist'
-        table:
-          id: 'ID'
-          question: 'Вопрос'
-          link: 'Ссылка на Github'
-          email: 'Почта Автора'
-    badges:
-      index:
-        header: 'Бэйджи'
-        table:
-          image: 'Изображение'
-          title: 'Название'
-          rule: 'Правило получения'
-          actions: 'Действия'
-        links:
-          create: 'Новый Бэйдж'
-      badge:
-        links:
-          confirm: 'Вы уверены?'
-      new:
-        header: 'Новый Бэйдж'
-        buttons:
-          create: 'Создать'
-      create:
-        success: 'Бэйдж успешно создан!'
-      edit:
-        header: 'Редактировать Бэйдж'
-        buttons:
-          update: 'Обновить'
-      update:
-        success: 'Бэйдж успешно обновлен!'
-      destroy:
-        success: 'Бэйдж успешно удален!'
-      form:
-        links:
-          back: 'Назад'
-
-  pages:
-    home:
-      header: "Время пройти тесты!"
-      links:
-        tests: 'Перейти к тестам'
-
-  tests:
-    index:
-      header: 'Доступные Тесты'
-      table:
-        title: 'Название'
-        level: 'Уровень'
-        questions_count: 'Количество вопросов'
-        actions: 'Действия'
-    test:
       question:
-        zero: '%{count} вопросов'
-        one: '%{count} вопрос'
-        few: '%{count} вопроса'
-        many: '%{count} вопросов'
-        other: '%{count} вопросов'
-      level: 'Уровень'
-      buttons:
-        start: 'Начать'
+        links:
+          confirm: 'Вы уверены?'
+          destroy: 'Удалить'
+          edit: 'Редактировать'
+      show:
+        answers: 'Ответы:'
+        links:
+          back: 'Назад'
+          new_answer: 'Новый ответ'
+        question: 'Вопрос'
+      update:
+        success: 'Вопрос успешно обновлен!'
+    tests:
+      create:
+        success: 'Тест успешно создан!'
+      destroy:
+        success: 'Тест успешно удален!'
+      edit:
+        buttons:
+          update: 'Обновить'
+        header: 'Редактировать Тест'
 
-  test_passages:
-    show:
-      header: 'Прохождение %{title} Теста'
-      buttons:
-        submit: 'Следующий'
-      links:
-        gist: 'Сохранить Вопрос в Gist'
-    result:
-      header: 'Результаты %{title} Теста:'
-      corrects: 'Правильных ответов: %{correct_questions} из %{questions_count}'
-      success: 'Поздравляем! Вы прошли Тест.'
-      failed: 'Тест провален! Попробуйте снова.'
-      links:
-        back: 'Назад'
-    gist:
-      success: 'Gist успешно сохранен! Пройдите по <a href="%{link}" target="_blank">этой ссылке</a> чтобы ознакомиться с Gist.'
-      failed: 'Произошла ошибка в процессе сохранения Gist'
+      form:
+        links:
+          back: 'Назад'
+      form_inline:
+        update: 'OK'
+      index:
+        header: 'Доступные Тесты'
+        links:
+          new: 'Новый Тест'
+        table:
+          actions: 'Действия'
+          level: 'Уровень'
+          published: 'Опубликован'
+          questions_count: 'Количество вопросов'
+          title: 'Название'
+      new:
+        buttons:
+          create: 'Создать'
+        header: 'Новый Тест'
+
+      show:
+        level: 'Уровень'
+        links:
+          back: 'Назад'
+          confirm: 'Вы уверены?'
+          destroy: 'Удалить'
+          edit: 'Редактировать'
+          new_question: 'Новый вопрос'
+        questions: 'Вопросы:'
+      test:
+        level: 'Уровень'
+        links:
+          confirm: 'Вы уверены?'
+        question:
+          few: '%{count} вопроса'
+          many: '%{count} вопросов'
+          one: '%{count} вопрос'
+          other: '%{count} вопросов'
+      update:
+        success: 'Тест успешно обновлен!'
+
+
 
   contacts:
+    create:
+      failed: 'Пожалуйста, напишите свое сообщение.'
+      success: 'Ваше сообщение успешно отправлено!'
     new:
-      header: 'Отправьте нам сообщение'
-      message: 'Сообщение'
       buttons:
         send: 'Отправить'
-    create:
-      success: 'Ваше сообщение успешно отправлено!'
-      failed: 'Пожалуйста, напишите свое сообщение.'
-
-  shared:
-    errors:
-      message:
-        one: 'Форма содержит %{count} ошибку'
-        few: 'Форма содержит %{count} ошибки'
-        many: 'Форма содержит %{count} ошибок'
-        other: 'Форма содержит %{count} ошибки'
-    menu:
-      greeting: 'Приветствуем, Гуру %{name}!'
-      buttons:
-        logout: 'Выйти'
-      links:
-        home: 'TestGuru'
-        signup: 'Регистрация'
-        login: 'Войти'
-
+      header: 'Отправьте нам сообщение'
+      message: 'Сообщение'
+  contacts_mailer:
+    send_form:
+      subject: 'Получено новое сообщение с сайта TestGuru'
   layouts:
     application:
       title: 'TestGuru'
@@ -227,16 +175,71 @@ ru:
       links:
         contacts: 'Связаться с нами'
         thinknetica: 'Учебный проект в онлайн-школе Thinknetica'
-
-  tests_mailer:
-    completed_test:
-      subject: 'Вы только что прошли TestGuru Тест!'
-
-  contacts_mailer:
-    send_form:
-      subject: 'Получено новое сообщение с сайта TestGuru'
-
+  pages:
+    home:
+      header: "Время пройти тесты!"
+      links:
+        tests: 'Перейти к тестам'
   services:
     gist_question_service:
       gist_params:
         description: 'Вопрос о %{test_title} из TestGuru'
+  shared:
+    errors:
+      message:
+        few: 'Форма содержит %{count} ошибки'
+        many: 'Форма содержит %{count} ошибок'
+        one: 'Форма содержит %{count} ошибку'
+        other: 'Форма содержит %{count} ошибки'
+    menu:
+      admin: 'Администратор'
+      buttons:
+        logout: 'Выйти'
+      greeting: 'Приветствуем, Гуру %{name}!'
+      links:
+        admin:
+          badges: 'Бэйджи'
+          tests: 'Тесты'
+        home: 'TestGuru'
+        login: 'Войти'
+        signup: 'Регистрация'
+  test_passages:
+    gist:
+      failed: 'Произошла ошибка в процессе сохранения Gist'
+      success: 'Gist успешно сохранен! Пройдите по <a href="%{link}" target="_blank">этой ссылке</a> чтобы ознакомиться с Gist.'
+    result:
+      corrects: 'Правильных ответов: %{correct_questions} из %{questions_count}'
+      failed: 'Тест провален! Попробуйте снова.'
+      header: 'Результаты %{title} Теста:'
+      links:
+        back: 'Назад'
+      success: 'Поздравляем! Вы прошли Тест.'
+    show:
+      buttons:
+        submit: 'Следующий'
+      header: 'Прохождение %{title} Теста'
+      links:
+        gist: 'Сохранить Вопрос в Gist'
+
+
+  tests:
+    index:
+      header: 'Доступные Тесты'
+      table:
+        actions: 'Действия'
+        level: 'Уровень'
+        questions_count: 'Количество вопросов'
+        title: 'Название'
+    test:
+      buttons:
+        start: 'Начать'
+      level: 'Уровень'
+      question:
+        few: '%{count} вопроса'
+        many: '%{count} вопросов'
+        one: '%{count} вопрос'
+        other: '%{count} вопросов'
+        zero: '%{count} вопросов'
+  tests_mailer:
+    completed_test:
+      subject: 'Вы только что прошли TestGuru Тест!'

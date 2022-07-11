@@ -1,219 +1,165 @@
 en:
   admin:
+    answers:
+      answer:
+        links:
+          confirm: 'Are you sure?'
+          destroy: 'Delete'
+          edit: 'Edit'
+          show: 'Show'
+      create:
+        success: 'Answer successfully created!'
+      destroy:
+        success: 'Answer successfully deleted!'
+      edit:
+        buttons:
+          update: 'Update'
+        header: 'Edit answer'
+      form:
+        links:
+          back: 'Back'
+      new:
+        header: 'New answer'
+        buttons:
+          create: 'Create'
+      show:
+        answer: 'Answer'
+        correct: 'Correct'
+        links:
+          back: 'Back'
+        question: 'Question'
+      update:
+        success: 'Answer successfully updated!'
+    badges:
+      badge:
+        links:
+          confirm: 'Are you sure?'
+      create:
+        success: 'Badge successfully created!'
+      destroy:
+        success: 'Badge successfully deleted!'
+      edit:
+        buttons:
+          update: 'Update'
+        header: 'Edit Badge'
+      form:
+        links:
+          back: 'Back'
+      index:
+        header: 'Badges'
+        links:
+          create: 'New Badge'
+        table:
+          actions: 'Actions'
+          image: 'Image'
+          rule: 'Rule'
+          title: 'Title'
+      new:
+        buttons:
+          create: 'Create'
+        header: 'New Badge'
+      update:
+        success: 'Badge successfully updated!'
     base:
       info: 'You are not authorized to view this page'
-    tests:
+    gists:
       index:
-        header: 'Available Tests'
+        header: 'Created Gists'
         table:
-          title: 'Title'
-          level: 'Level'
-          questions_count: 'Questions count'
-          published: 'Published'
-          actions: 'Actions'
-        links:
-          new: 'New Test'
-      form_inline:
-        update: 'OK'
-      new:
-        header: 'New Test'
-        buttons:
-          create: 'Create'
-      create:
-        success: 'Test successfully created!'
-      show:
-        level: 'Level'
-        links:
-          edit: 'Edit'
-          destroy: 'Delete'
-          confirm: 'Are you sure?'
-          new_question: 'New question'
-          back: 'Back'
-        questions: 'Questions'
-      edit:
-        header: 'Edit Test'
-        buttons:
-          update: 'Update'
-      update:
-        success: 'Test successfully updated!'
-      destroy:
-        success: 'Test successfully deleted!'
-      form:
-        links:
-          back: 'Back'
-      test:
-        question:
-          one: '%{count} question'
-          other: '%{count} questions'
-        level: 'Level'
-        links:
-          confirm: 'Are you sure?'
+          email: 'Author email'
+          id: 'ID'
+          link: 'Link to Github'
+          question: 'Question'
     questions:
-      new:
-        buttons:
-          create: 'Create'
       create:
         success: 'Question successfully created!'
-      show:
-        question: 'Question'
-        answers: 'Answers:'
-        links:
-          new_answer: 'New answer'
-          back: 'Back'
+      destroy:
+        success: 'Question successfully deleted!'
       edit:
         buttons:
           update: 'Update'
-      update:
-        success: 'Question successfully updated!'
-      destroy:
-        success: 'Question successfully deleted!'
       form:
         links:
           back: 'Back'
-      question:
-        links:
-          edit: 'Edit'
-          destroy: 'Delete'
-          confirm: 'Are you sure?'
       helpers:
         question_header:
           base_header: '%{question_title} Question'
           create: 'Create new %{base_header}'
           update: 'Edit %{base_header}'
-    answers:
       new:
-        header: 'New answer'
         buttons:
           create: 'Create'
-      create:
-        success: 'Answer successfully created!'
-      show:
-        question: 'Question'
-        answer: 'Answer'
-        correct: 'Correct'
-        links:
-          back: 'Back'
-      edit:
-        header: 'Edit answer'
-        buttons:
-          update: 'Update'
-      update:
-        success: 'Answer successfully updated!'
-      destroy:
-        success: 'Answer successfully deleted!'
-      form:
-        links:
-          back: 'Back'
-      answer:
-        links:
-          show: 'Show'
-          edit: 'Edit'
-          destroy: 'Delete'
-          confirm: 'Are you sure?'
-    gists:
-      index:
-        header: 'Created Gists'
-        table:
-          id: 'ID'
-          question: 'Question'
-          link: 'Link to Github'
-          email: 'Author email'
-    badges:
-      index:
-        header: 'Badges'
-        table:
-          image: 'Image'
-          title: 'Title'
-          rule: 'Rule'
-          actions: 'Actions'
-        links:
-          create: 'New Badge'
-      badge:
-        links:
-          confirm: 'Are you sure?'
-      new:
-        header: 'New Badge'
-        buttons:
-          create: 'Create'
-      create:
-        success: 'Badge successfully created!'
-      edit:
-        header: 'Edit Badge'
-        buttons:
-          update: 'Update'
-      update:
-        success: 'Badge successfully updated!'
-      destroy:
-        success: 'Badge successfully deleted!'
-      form:
-        links:
-          back: 'Back'
-
-  pages:
-    home:
-      header: "Let's pass some tests!"
-      links:
-        tests: 'Get Tests'
-
-  tests:
-    index:
-      header: 'Available Tests'
-      table:
-        title: 'Title'
-        level: 'Level'
-        questions_count: 'Questions count'
-        actions: 'Actions'
-    test:
       question:
-        zero: '%{count} questions'
-        one: '%{count} question'
-        other: '%{count} questions'
-      level: 'Level'
-      buttons:
-        start: 'Start'
-
-  test_passages:
-    show:
-      header: 'Passing the %{title} Test'
-      buttons:
-        submit: 'Next'
-      links:
-        gist: 'Gist Question'
-    result:
-      header: '%{title} Test results:'
-      corrects: 'Correct questions: %{correct_questions} from %{questions_count}'
-      success: 'Congratulations! You passed the Test.'
-      failed: 'Test failed! Try again.'
-      links:
-        back: 'Back'
-    gist:
-      success: 'Gist successfully saved! Go <a href="%{link}" target="_blank">this link</a> to see Gist.'
-      failed: 'An error occurred while saving Gist.'
-
+        links:
+          confirm: 'Are you sure?'
+          destroy: 'Delete'
+          edit: 'Edit'
+      show:
+        answers: 'Answers:'
+        links:
+          back: 'Back'
+          new_answer: 'New answer'
+        question: 'Question'
+      update:
+        success: 'Question successfully updated!'
+    tests:
+      create:
+        success: 'Test successfully created!'
+      destroy:
+        success: 'Test successfully deleted!'
+      edit:
+        buttons:
+          update: 'Update'
+        header: 'Edit Test'
+      form:
+        links:
+          back: 'Back'
+      form_inline:
+        update: 'OK'
+      index:
+        header: 'Available Tests'
+        links:
+          new: 'New Test'
+        table:
+          actions: 'Actions'
+          published: 'Published'
+          level: 'Level'
+          questions_count: 'Questions count'
+          title: 'Title'
+      new:
+        buttons:
+          create: 'Create'
+        header: 'New Test'
+      show:
+        level: 'Level'
+        links:
+          back: 'Back'
+          confirm: 'Are you sure?'
+          destroy: 'Delete'
+          edit: 'Edit'
+          new_question: 'New question'
+        questions: 'Questions'
+      test:
+        level: 'Level'
+        links:
+          confirm: 'Are you sure?'
+        question:
+          one: '%{count} question'
+          other: '%{count} questions'
+      update:
+        success: 'Test successfully updated!'
   contacts:
+    create:
+      failed: 'Please enter your message.'
+      success: 'Yor message successfully sent!'
     new:
-      header: 'Send us your message'
-      message: 'Message'
       buttons:
         send: 'Send'
-    create:
-      success: 'Yor message successfully sent!'
-      failed: 'Please enter your message.'
-
-  shared:
-    errors:
-      message:
-        one: 'The form contains %{count} error'
-        other: 'The form contains %{count} errors'
-    menu:
-      greeting: 'Welcome, %{name} Guru!'
-      buttons:
-        logout: 'Logout'
-      links:
-        home: 'TestGuru'
-        signup: 'Signup'
-        login: 'Login'
-
+      header: 'Send us your message'
+      message: 'Message'
+  contacts_mailer:
+    send_form:
+      subject: 'Received new message from TestGuru'
   layouts:
     application:
       title: 'TestGuru'
@@ -221,16 +167,65 @@ en:
       links:
         contacts: 'Contact with us'
         thinknetica: 'Educational project at Thinknetica online school'
-
-  tests_mailer:
-    completed_test:
-      subject: 'You just completed TestGuru Test!'
-
-  contacts_mailer:
-    send_form:
-      subject: 'Received new message from TestGuru'
-
+  pages:
+    home:
+      header: "Let's pass some tests!"
+      links:
+        tests: 'Get Tests'
   services:
     gist_question_service:
       gist_params:
         description: 'A question about %{test_title} from TestGuru'
+  shared:
+    errors:
+      message:
+        one: 'The form contains %{count} error'
+        other: 'The form contains %{count} errors'
+    menu:
+      admin: 'Admin'
+      buttons:
+        logout: 'Logout'
+      greeting: 'Welcome, %{name} Guru!'
+      links:
+        admin:
+          badges: 'Badges'
+          tests: 'Tests'
+        home: 'TestGuru'
+        login: 'Login'
+        signup: 'Signup'
+  test_passages:
+    gist:
+      failed: 'An error occurred while saving Gist.'
+      success: 'Gist successfully saved! Go <a href="%{link}" target="_blank">this link</a> to see Gist.'
+    result:
+      corrects: 'Correct questions: %{correct_questions} from %{questions_count}'
+      failed: 'Test failed! Try again.'
+      header: '%{title} Test results:'
+      links:
+        back: 'Back'
+      success: 'Congratulations! You passed the Test.'
+    show:
+      buttons:
+        submit: 'Next'
+      header: 'Passing the %{title} Test'
+      links:
+        gist: 'Gist Question'
+  tests:
+    index:
+      header: 'Available Tests'
+      table:
+        actions: 'Actions'
+        level: 'Level'
+        questions_count: 'Questions count'
+        title: 'Title'
+    test:
+      buttons:
+        start: 'Start'
+      level: 'Level'
+      question:
+        one: '%{count} question'
+        other: '%{count} questions'
+        zero: '%{count} questions'
+  tests_mailer:
+    completed_test:
+      subject: 'You just completed TestGuru Test!'
