@@ -118,6 +118,36 @@ en:
           question: 'Question'
           link: 'Link to Github'
           email: 'Author email'
+    badges:
+      index:
+        header: 'Badges'
+        table:
+          image: 'Image'
+          title: 'Title'
+          rule: 'Rule'
+          actions: 'Actions'
+        links:
+          create: 'New Badge'
+      badge:
+        links:
+          confirm: 'Are you sure?'
+      new:
+        header: 'New Badge'
+        buttons:
+          create: 'Create'
+      create:
+        success: 'Badge successfully created!'
+      edit:
+        header: 'Edit Badge'
+        buttons:
+          update: 'Update'
+      update:
+        success: 'Badge successfully updated!'
+      destroy:
+        success: 'Badge successfully deleted!'
+      form:
+        links:
+          back: 'Back'
 
   pages:
     home:

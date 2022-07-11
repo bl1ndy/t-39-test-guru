@@ -1,0 +1,22 @@
+<h1 class="mb-4">
+  <%= t('.header') %>
+</h1>
+
+<%= link_to t('.links.create'), new_admin_badge_path, class: 'btn btn-primary mb-3' %>
+
+<div class="table-responsive mt-4">
+  <table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col"><%= t('.table.image') %></th>
+        <th scope="col"><%= t('.table.title') %></th>
+        <th scope="col"><%= t('.table.rule') %></th>
+        <th scope="col"><%= t('.table.actions') %></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= render @badges %>
+    </tbody>
+  </table>
+</div>

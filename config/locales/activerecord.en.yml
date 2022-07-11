@@ -6,6 +6,10 @@ en:
       test: 'Test'
       question: 'Question'
       answer: 'Answer'
+      category: 'Category'
+      gist: 'Gist'
+      test_passage: 'Test Passage'
+      badge: 'Badge'
 
     attributes:
       user:
@@ -28,6 +32,10 @@ en:
         body: 'Text'
         correct: 'Correct'
         question_id: 'Question'
+      badge:
+        title: 'Title'
+        rule: 'Rule'
+        img_url: 'Image URL'
 
     errors:
       models:
@@ -57,3 +65,7 @@ en:
               required: 'must exist'
             base:
               too_much: 'Answer limit reached for this question'
+        badge:
+          attributes:
+            img_url:
+              not_an_image: 'should contain only jpg(jpeg) or png image.'

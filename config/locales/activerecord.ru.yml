@@ -6,6 +6,10 @@ ru:
       test: 'Тест'
       question: 'Вопрос'
       answer: 'Ответ'
+      category: 'Категория'
+      gist: 'Gist'
+      test_passage: 'Прохождение Теста'
+      badge: 'Бэйдж'
 
     attributes:
       user:
@@ -28,6 +32,10 @@ ru:
         body: 'Текст'
         correct: 'Верный'
         question_id: 'Вопрос'
+      badge:
+        title: 'Название'
+        rule: 'Правило получения'
+        img_url: 'Ссылка на изображение'
 
     errors:
       models:
@@ -66,3 +74,7 @@ ru:
               required: 'не может отсутствовать'
             base:
               too_much: 'Достигнут лимит ответов для данного вопроса'
+        badge:
+          attributes:
+            img_url:
+              not_an_image: 'может содержать только изображение формата jpg(jpeg) или png.'

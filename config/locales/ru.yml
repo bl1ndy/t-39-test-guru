@@ -18,7 +18,7 @@ ru:
       new:
         header: 'Новый Тест'
         buttons:
-         create: 'Создать'
+          create: 'Создать'
       create:
         success: 'Тест успешно создан!'
       show:
@@ -120,6 +120,36 @@ ru:
           question: 'Вопрос'
           link: 'Ссылка на Github'
           email: 'Почта Автора'
+    badges:
+      index:
+        header: 'Бэйджи'
+        table:
+          image: 'Изображение'
+          title: 'Название'
+          rule: 'Правило получения'
+          actions: 'Действия'
+        links:
+          create: 'Новый Бэйдж'
+      badge:
+        links:
+          confirm: 'Вы уверены?'
+      new:
+        header: 'Новый Бэйдж'
+        buttons:
+          create: 'Создать'
+      create:
+        success: 'Бэйдж успешно создан!'
+      edit:
+        header: 'Редактировать Бэйдж'
+        buttons:
+          update: 'Обновить'
+      update:
+        success: 'Бэйдж успешно обновлен!'
+      destroy:
+        success: 'Бэйдж успешно удален!'
+      form:
+        links:
+          back: 'Назад'
 
   pages:
     home:

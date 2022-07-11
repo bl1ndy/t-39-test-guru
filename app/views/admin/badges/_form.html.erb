@@ -1,0 +1,25 @@
+<%= form_with(model: [:admin, @badge], local: true) do |f| %>
+  <%= render 'shared/errors', object: f.object %>
+
+  <div class="mb-3">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :rule %>
+    <%= f.select :rule,
+                 options_for_select(Badge.rules.map { |k, v| [k.titleize, Badge.rules.key(v)] }, @badge.rule),
+                 { prompt: true },
+                 { class: 'form-select' } %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :img_url %>
+    <%= f.text_field :img_url, class: 'form-control' %>
+  </div>
+
+  <%= f.submit button_text, class: 'btn btn-primary' %>
+
+  <%= link_to t('.links.back'), admin_badges_path, class: 'btn btn-secondary' %>
+<% end %>
