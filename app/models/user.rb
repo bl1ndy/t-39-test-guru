@@ -33,4 +33,8 @@ class User < ApplicationRecord
   def admin?
     is_a?(Admin)
   end
+
+  def badge_achievements(badge)
+    achievements.where(badge:)
+  end
 end

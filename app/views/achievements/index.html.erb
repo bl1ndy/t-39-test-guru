@@ -3,13 +3,18 @@
 </h1>
 
 <div class="table-responsive mt-4">
-  <table class="table">
+  <table class="table mt-3">
     <tbody>
       <% @badges.each do |badge| %>
         <% if @user_badges.include?(badge) %>
           <tr class="align-middle">
             <td>
-              <%= image_tag badge.img_url, size: '50' %>
+              <div class="position-relative">
+                <%= image_tag badge.img_url, size: '50' %>
+                <span class="position-absolute top-0 start-1 translate-middle badge rounded-pill bg-success">
+                  <%= current_user.badge_achievements(badge).count %>
+                </span>
+              </div>
             </td>
             <td class="text-yellow-600">
               <b><%= badge.title %></b>
