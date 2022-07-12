@@ -1,16 +1,11 @@
 # frozen_string_literal: true
 
 class AchievementService
-  BADGES = {
-    all_backend: Badge.find_by(rule: :all_backend),
-    all_frontend: Badge.find_by(rule: :all_frontend),
-    all_easy: Badge.find_by(rule: :all_easy),
-    all_medium: Badge.find_by(rule: :all_medium),
-    all_hard: Badge.find_by(rule: :all_hard),
-    first_attempt_success: Badge.find_by(rule: :first_attempt_success)
-  }.freeze
-
   def initialize(test_passage, user)
+    @badges = Badge.all.each_with_object({}) do |badge, badges|
+      badges[badge.rule.to_sym] = badge
+      badges
+    end
     @test_passage = test_passage
     @user = user
     @test = @test_passage.test
@@ -21,9 +16,9 @@ class AchievementService
   def call
     return if already_passed?
 
-    first_attempt_success
-    all_by_category
-    all_by_difficult
+    first_attempt_success if @badges[:first_attempt_success]
+    all_by_category if @badges["all_#{@category.downcase}".to_sym]
+    all_by_difficult if @badges["all_#{difficulty}".to_sym]
   end
 
   private
@@ -31,7 +26,7 @@ class AchievementService
   def first_attempt_success
     return unless @user.test_passages.where(test: @test).count == 1
 
-    @user.achievements.create(badge: BADGES[:first_attempt_success])
+    @user.achievements.create(badge: @badges[:first_attempt_success])
   end
 
   def all_by_category
@@ -41,17 +36,17 @@ class AchievementService
                         .map(&:test)
     return unless tests.all? { |test| passed_tests.include?(test) }
 
-    @user.achievements.create(badge: BADGES["all_#{@category.downcase}".to_sym])
+    @user.achievements.create(badge: @badges["all_#{@category.downcase}".to_sym])
   end
 
   def all_by_difficult
-    tests = Test.send(difficulty)
+    tests = Test.published.send(difficulty)
     passed_tests = @user.success_passages
                         .select { |passage| tests.include?(passage.test) }
                         .map(&:test)
     return unless tests.all? { |test| passed_tests.include?(test) }
 
-    @user.achievements.create(badge: BADGES["all_#{difficulty}".to_sym])
+    @user.achievements.create(badge: @badges["all_#{difficulty}".to_sym])
   end
 
   def difficulty
