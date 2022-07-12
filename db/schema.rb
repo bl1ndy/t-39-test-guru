@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_11_161748) do
+ActiveRecord::Schema.define(version: 2022_07_12_061842) do
+
+  create_table "achievements", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "badge_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["badge_id"], name: "index_achievements_on_badge_id"
+    t.index ["user_id"], name: "index_achievements_on_user_id"
+  end
 
   create_table "answers", force: :cascade do |t|
     t.text "body", null: false
@@ -104,6 +113,8 @@ ActiveRecord::Schema.define(version: 2022_07_11_161748) do
     t.index ["type"], name: "index_users_on_type"
   end
 
+  add_foreign_key "achievements", "badges"
+  add_foreign_key "achievements", "users"
   add_foreign_key "answers", "questions"
   add_foreign_key "gists", "questions"
   add_foreign_key "gists", "users"

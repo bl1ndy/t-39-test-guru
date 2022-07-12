@@ -17,6 +17,8 @@ class User < ApplicationRecord
   has_many :test_passages, dependent: nil
   has_many :tests, through: :test_passages
   has_many :gists, dependent: nil
+  has_many :achievements, dependent: :destroy
+  has_many :badges, through: :achievements
 
   validates :first_name, :last_name, presence: true, length: { maximum: 255 }
 

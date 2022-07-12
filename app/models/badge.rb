@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class Badge < ApplicationRecord
+  has_many :achievements, dependent: :destroy
+  has_many :users, through: :achievements
+
   enum rule: {
     no_rule: 0,
     all_backend: 1,
