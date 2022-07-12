@@ -134,6 +134,7 @@ en:
           new: 'New Test'
         table:
           actions: 'Actions'
+          category: 'Category'
           published: 'Published'
           level: 'Level'
           questions_count: 'Questions count'
@@ -227,6 +228,7 @@ en:
       header: 'Available Tests'
       table:
         actions: 'Actions'
+        category: 'Category'
         level: 'Level'
         questions_count: 'Questions count'
         title: 'Title'

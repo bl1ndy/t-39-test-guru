@@ -30,9 +30,9 @@ ru:
       form:
         links:
           back: 'Назад'
-      buttons:
-        create: 'Создать'
       new:
+        buttons:
+          create: 'Создать'
         header: 'Новый ответ'
       show:
         answer: 'Ответ'
@@ -134,6 +134,7 @@ ru:
           new: 'Новый Тест'
         table:
           actions: 'Действия'
+          category: 'Категория'
           level: 'Уровень'
           published: 'Опубликован'
           questions_count: 'Количество вопросов'
@@ -231,6 +232,7 @@ ru:
       header: 'Доступные Тесты'
       table:
         actions: 'Действия'
+        category: 'Категория'
         level: 'Уровень'
         questions_count: 'Количество вопросов'
         title: 'Название'
