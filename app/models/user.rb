@@ -34,6 +34,10 @@ class User < ApplicationRecord
     is_a?(Admin)
   end
 
+  def success_passages
+    test_passages.select(&:passed?)
+  end
+
   def badge_achievements(badge)
     achievements.where(badge:)
   end
