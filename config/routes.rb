@@ -19,6 +19,8 @@ Rails.application.routes.draw do
 
   resources :contacts, only: %i[new create]
 
+  resources :achievements, only: :index
+
   namespace :admin do
     resources :tests do
       patch :update_inline, on: :member

@@ -67,6 +67,7 @@ en:
             last_name:
               blank: "can't be blank"
     models:
+      achievement: 'Achievement'
       admin: 'Admin'
       answer: 'Answer'
       badge: 'Badge'

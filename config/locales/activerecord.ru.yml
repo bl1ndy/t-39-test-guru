@@ -67,6 +67,7 @@ ru:
             last_name:
               blank: 'должна быть указана'
     models:
+      achievement: 'Достижение'
       admin: 'Администратор'
       answer: 'Ответ'
       badge: 'Бэйдж'

@@ -1,0 +1,37 @@
+<h1 class="mb-4">
+  <%= t('.header') %>
+</h1>
+
+<div class="table-responsive mt-4">
+  <table class="table">
+    <tbody>
+      <% @badges.each do |badge| %>
+        <% if @user_badges.include?(badge) %>
+          <tr class="align-middle">
+            <td>
+              <%= image_tag badge.img_url, size: '50' %>
+            </td>
+            <td class="text-yellow-600">
+              <b><%= badge.title %></b>
+            </td>
+            <td class="text-yellow-600">
+              <b><%= badge_description(badge) %></b>
+            </td>
+          </tr>
+        <% else %>
+          <tr class="align-middle text-muted">
+            <td class="monochromed">
+              <%= image_tag badge.img_url, size: '50' %>
+            </td>
+            <td>
+              <b><%= badge.title %></b>
+            </td>
+            <td>
+              <b><%= badge_description(badge) %></b>
+            </td>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>

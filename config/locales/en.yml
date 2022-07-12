@@ -1,4 +1,16 @@
 en:
+  achievements:
+    helpers:
+      descriptions:
+        no_rule: 'No rule yet'
+        all_backend: 'You successfully passed all tests in the Backend category'
+        all_frontend: 'You successfully passed all tests in the Frontend category'
+        all_easy: 'You successfully passed all tests on Easy difficulty level'
+        all_medium: 'You successfully passed all tests on Medium difficulty level'
+        all_hard: 'You successfully passed all tests on Hard difficulty level'
+        first_attempt_success: 'You successfully passed a tests on the first try'
+    index:
+      header: 'Achievements'
   admin:
     answers:
       answer:
@@ -183,15 +195,15 @@ en:
         other: 'The form contains %{count} errors'
     menu:
       admin: 'Admin'
-      buttons:
-        logout: 'Logout'
       greeting: 'Welcome, %{name} Guru!'
       links:
+        achievements: 'Achievements'
         admin:
           badges: 'Badges'
           tests: 'Tests'
         home: 'TestGuru'
         login: 'Login'
+        logout: 'Logout'
         signup: 'Signup'
   test_passages:
     gist:

@@ -1,4 +1,16 @@
 ru:
+  achievements:
+    helpers:
+      descriptions:
+        no_rule: 'Правило пока не установлено'
+        all_backend: 'Вы успешно прошли все тесты в категории Backend'
+        all_frontend: 'Вы успешно прошли все тесты в категории Frontend'
+        all_easy: 'Вы успешно прошли все тесты на уровне сложности Легкий'
+        all_medium: 'Вы успешно прошли все тесты на уровне сложности Средний'
+        all_hard: 'Вы успешно прошли все тесты на уровне сложности Сложный'
+        first_attempt_success: 'Вы успешно прошли тест с первой попытки'
+    index:
+      header: 'Достижения'
   admin:
     answers:
       answer:
@@ -22,7 +34,6 @@ ru:
         create: 'Создать'
       new:
         header: 'Новый ответ'
-
       show:
         answer: 'Ответ'
         correct: 'Верный'
@@ -112,7 +123,6 @@ ru:
         buttons:
           update: 'Обновить'
         header: 'Редактировать Тест'
-
       form:
         links:
           back: 'Назад'
@@ -132,7 +142,6 @@ ru:
         buttons:
           create: 'Создать'
         header: 'Новый Тест'
-
       show:
         level: 'Уровень'
         links:
@@ -153,9 +162,6 @@ ru:
           other: '%{count} вопросов'
       update:
         success: 'Тест успешно обновлен!'
-
-
-
   contacts:
     create:
       failed: 'Пожалуйста, напишите свое сообщение.'
@@ -193,15 +199,15 @@ ru:
         other: 'Форма содержит %{count} ошибки'
     menu:
       admin: 'Администратор'
-      buttons:
-        logout: 'Выйти'
       greeting: 'Приветствуем, Гуру %{name}!'
       links:
+        achievements: 'Достижения'
         admin:
           badges: 'Бэйджи'
           tests: 'Тесты'
         home: 'TestGuru'
         login: 'Войти'
+        logout: 'Выйти'
         signup: 'Регистрация'
   test_passages:
     gist:
@@ -220,8 +226,6 @@ ru:
       header: 'Прохождение %{title} Теста'
       links:
         gist: 'Сохранить Вопрос в Gist'
-
-
   tests:
     index:
       header: 'Доступные Тесты'
