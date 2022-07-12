@@ -1,5 +1,5 @@
 admin = Admin.create(
-  email: 'admin@test.com',
+  email: 'ayoblindstone@gmail.com',
   first_name: "Admin",
   last_name: "Test",
   password: 'foobar',
