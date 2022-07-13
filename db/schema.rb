@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2022_07_13_132753) do
     t.string "title", null: false
     t.string "img_url", default: "/assets/default_badge-591d207ed11be2b72eaf3990c4949f60ae8a6f51bf217853902a5f4d0726f8a8.png", null: false
     t.integer "rule", default: 0, null: false
+    t.string "sub_rule"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

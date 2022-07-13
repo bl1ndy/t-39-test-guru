@@ -2,6 +2,7 @@
   <td><%= image_tag badge.img_url, size: '50' %></td>
   <td><%= badge.title %></td>
   <td><%= badge.rule.titleize %></td>
+  <td><%= badge.sub_rule %></td>
   <td>
     <%= link_to octicon('pencil', class: 'align-middle'),
                 edit_admin_badge_path(badge),

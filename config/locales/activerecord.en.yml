@@ -8,6 +8,7 @@ en:
       badge:
         img_url: 'Image URL'
         rule: 'Rule'
+        sub_rule: 'Sub Rule'
         title: 'Title'
       question:
         body: 'Text'

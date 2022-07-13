@@ -49,8 +49,8 @@ js_question.answers.create([
                              ])
 
 Badge.create(title: 'On first try!', rule: :first_attempt_success)
-Badge.create(title: 'Backend Guru', rule: :all_backend)
-Badge.create(title: 'Frontend Guru', rule: :all_frontend)
-Badge.create(title: 'First steps', rule: :all_easy)
-Badge.create(title: 'Skill up', rule: :all_medium)
-Badge.create(title: 'Hardcore', rule: :all_hard)
+Badge.create(title: 'Backend Guru', rule: :all_by_category, sub_rule: 'backend')
+Badge.create(title: 'Frontend Guru', rule: :all_by_category, sub_rule: 'frontend')
+Badge.create(title: 'First steps', rule: :all_by_difficulty, sub_rule: 'easy')
+Badge.create(title: 'Skill up', rule: :all_by_difficulty, sub_rule: 'medium')
+Badge.create(title: 'Hardcore', rule: :all_by_difficulty, sub_rule: 'hard')

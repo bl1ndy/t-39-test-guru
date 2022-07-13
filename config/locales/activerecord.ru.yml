@@ -7,8 +7,9 @@ ru:
         question_id: 'Вопрос'
       badge:
         img_url: 'Ссылка на изображение'
-        title: 'Название'
         rule: 'Правило получения'
+        sub_rule: 'Дополнительное правило'
+        title: 'Название'
       question:
         body: 'Текст'
         test_id: 'Тест'

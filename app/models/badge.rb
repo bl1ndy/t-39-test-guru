@@ -6,12 +6,9 @@ class Badge < ApplicationRecord
 
   enum rule: {
     no_rule: 0,
-    all_backend: 1,
-    all_frontend: 2,
-    all_easy: 3,
-    all_medium: 4,
-    all_hard: 5,
-    first_attempt_success: 6
+    all_by_category: 1,
+    all_by_difficulty: 2,
+    first_attempt_success: 3
   }
 
   validates :title, presence: true, length: { minimum: 3, maximum: 30 }

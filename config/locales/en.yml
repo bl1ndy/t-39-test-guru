@@ -65,6 +65,7 @@ en:
           actions: 'Actions'
           image: 'Image'
           rule: 'Rule'
+          sub_rule: 'Sub Rule'
           title: 'Title'
       new:
         buttons:
