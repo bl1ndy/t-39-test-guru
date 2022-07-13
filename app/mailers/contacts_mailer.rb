@@ -6,6 +6,6 @@ class ContactsMailer < ApplicationMailer
     @message = message
     admin = Admin.first
 
-    mail to: admin.mail
+    mail to: admin.email
   end
 end
