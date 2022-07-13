@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_12_061842) do
+ActiveRecord::Schema.define(version: 2022_07_13_132753) do
 
   create_table "achievements", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -82,6 +82,7 @@ ActiveRecord::Schema.define(version: 2022_07_12_061842) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "current_question_id"
     t.integer "correct_questions", default: 0
+    t.boolean "passed", default: false
     t.index ["current_question_id"], name: "index_tests_users_on_current_question_id"
     t.index ["test_id"], name: "index_tests_users_on_test_id"
     t.index ["user_id"], name: "index_tests_users_on_user_id"
