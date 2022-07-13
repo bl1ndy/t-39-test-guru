@@ -3,11 +3,8 @@ en:
     helpers:
       descriptions:
         no_rule: 'No rule yet'
-        all_backend: 'You successfully passed all tests in the Backend category'
-        all_frontend: 'You successfully passed all tests in the Frontend category'
-        all_easy: 'You successfully passed all tests on Easy difficulty level'
-        all_medium: 'You successfully passed all tests on Medium difficulty level'
-        all_hard: 'You successfully passed all tests on Hard difficulty level'
+        all_by_category: 'You successfully passed all tests in the %{sub_rule} category'
+        all_by_difficulty: 'You successfully passed all tests on %{sub_rule} level'
         first_attempt_success: 'You successfully passed a tests on the first try'
     index:
       header: 'Achievements'
