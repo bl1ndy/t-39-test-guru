@@ -4,7 +4,9 @@ class TestPassagesController < ApplicationController
   before_action :find_test_passage!, only: %i[show update result gist]
   before_action :find_test!, only: %i[show update result]
 
-  def show; end
+  def show
+    @endtime = @test_passage.created_at + @test_passage.test.countdown
+  end
 
   def update
     @test_passage.accept!(params[:answer_ids])
