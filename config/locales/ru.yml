@@ -126,6 +126,9 @@ ru:
           back: 'Назад'
       form_inline:
         update: 'OK'
+      helpers:
+        formatted_countdown:
+          not_limited: 'Не ограничено'
       index:
         header: 'Доступные Тесты'
         links:
@@ -133,6 +136,7 @@ ru:
         table:
           actions: 'Действия'
           category: 'Категория'
+          countdown: 'Время на прохождение'
           level: 'Уровень'
           published: 'Опубликован'
           questions_count: 'Количество вопросов'
@@ -231,6 +235,7 @@ ru:
       table:
         actions: 'Действия'
         category: 'Категория'
+        countdown: 'Время на прохождение'
         level: 'Уровень'
         questions_count: 'Количество вопросов'
         title: 'Название'

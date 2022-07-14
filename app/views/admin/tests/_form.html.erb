@@ -7,13 +7,18 @@
   </div>
 
   <div class="mb-3">
-    <%= f.label :level%>
+    <%= f.label :level %>
     <%= f.number_field :level, class: 'form-control' %>
   </div>
 
   <div class="mb-3">
     <%= f.label :category_id %>
     <%= f.collection_select :category_id, Category.all, :id, :title, { prompt: true }, { class: 'form-select' } %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :countdown %>
+    <%= f.number_field :countdown, class: 'form-control' %>
   </div>
 
   <div class="mb-3">

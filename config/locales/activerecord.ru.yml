@@ -17,6 +17,7 @@ ru:
         author: 'Автор'
         category: 'Категория'
         category_id: 'Категория'
+        countdown: 'Время на прохождение'
         level: 'Уровень'
         title: 'Название'
       user:
@@ -52,6 +53,9 @@ ru:
               required: 'не может отсутствовать'
             category_id:
               required: 'не может отсутствовать'
+            countdown:
+              greater_than_or_equal_to: 'должно быть больше или равно %{count}'
+              not_an_integer: 'должно быть целым числом'
             level:
               greater_than: 'должен быть больше %{count}'
               not_an_integer: 'должен быть целым числом'
