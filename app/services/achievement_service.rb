@@ -12,19 +12,19 @@ class AchievementService
     return if already_passed?
 
     Badge.all.each do |badge|
-      @user.badges << badge if send(badge.rule, badge.sub_rule)
+      next if badge.rule == 'no_rule'
+
+      @user.badges << badge if send("#{badge.rule}_award?", badge.sub_rule)
     end
   end
 
   private
 
-  def no_rule(_sub_rule); end
-
-  def first_attempt_success(_sub_rule)
+  def first_attempt_success_award?(_sub_rule)
     @user.test_passages.where(test: @test).count == 1
   end
 
-  def all_by_category(sub_rule)
+  def all_by_category_award?(sub_rule)
     return if @category != sub_rule.downcase.capitalize
 
     tests = Test.published.by_category(@category)
@@ -32,7 +32,7 @@ class AchievementService
     passed_tests.count == tests.count
   end
 
-  def all_by_difficulty(sub_rule)
+  def all_by_difficulty_award?(sub_rule)
     return if difficulty != sub_rule.downcase.to_sym
 
     tests = Test.published.send(difficulty)
