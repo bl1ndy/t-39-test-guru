@@ -1,36 +1,63 @@
 ru:
   activerecord:
-    models:
-      user: 'Пользователь'
-      admin: 'Администратор'
-      test: 'Тест'
-      question: 'Вопрос'
-      answer: 'Ответ'
-
     attributes:
-      user:
-        first_name: 'Имя'
-        last_name: 'Фамилия'
-        email: 'Почта'
-        password: 'Пароль'
-        password_confirmation: 'Подтверждение пароля'
-        remember_me: 'Запомнить меня'
-      test:
-        title: 'Название'
-        level: 'Уровень'
-        category: 'Категория'
-        category_id: 'Категория'
-        author: 'Автор'
-      question:
-        body: 'Текст'
-        test_id: 'Тест'
       answer:
         body: 'Текст'
         correct: 'Верный'
         question_id: 'Вопрос'
-
+      badge:
+        img_url: 'Ссылка на изображение'
+        rule: 'Правило получения'
+        sub_rule: 'Дополнительное правило'
+        title: 'Название'
+      question:
+        body: 'Текст'
+        test_id: 'Тест'
+      test:
+        author: 'Автор'
+        category: 'Категория'
+        category_id: 'Категория'
+        level: 'Уровень'
+        title: 'Название'
+      user:
+        email: 'Почта'
+        first_name: 'Имя'
+        last_name: 'Фамилия'
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
+        remember_me: 'Запомнить меня'
     errors:
       models:
+        answer:
+          attributes:
+            base:
+              too_much: 'Достигнут лимит ответов для данного вопроса'
+            body:
+              blank: 'не может быть пустым'
+            question_id:
+              required: 'не может отсутствовать'
+        badge:
+          attributes:
+            img_url:
+              not_an_image: 'может содержать только изображение формата jpg(jpeg) или png.'
+        question:
+          attributes:
+            body:
+              blank: 'не может быть пустым'
+            test_id:
+              required: 'не может отсутствовать'
+        test:
+          attributes:
+            author_id:
+              required: 'не может отсутствовать'
+            category_id:
+              required: 'не может отсутствовать'
+            level:
+              greater_than: 'должен быть больше %{count}'
+              not_an_integer: 'должен быть целым числом'
+            title:
+              blank: 'не может быть пустым'
+              taken: 'уже было указано для другого теста'
         user:
           attributes:
             email:
@@ -40,29 +67,14 @@ ru:
               blank: 'должно быть указано'
             last_name:
               blank: 'должна быть указана'
-        test:
-          attributes:
-            title:
-              blank: 'не может быть пустым'
-              taken: 'уже было указано для другого теста'
-            category_id:
-              required: 'не может отсутствовать'
-            author_id:
-              required: 'не может отсутствовать'
-            level:
-              greater_than: 'должен быть больше %{count}'
-              not_an_integer: 'должен быть целым числом'
-        question:
-          attributes:
-            body:
-              blank: 'не может быть пустым'
-            test_id:
-              required: 'не может отсутствовать'
-        answer:
-          attributes:
-            body:
-              blank: 'не может быть пустым'
-            question_id:
-              required: 'не может отсутствовать'
-            base:
-              too_much: 'Достигнут лимит ответов для данного вопроса'
+    models:
+      achievement: 'Достижение'
+      admin: 'Администратор'
+      answer: 'Ответ'
+      badge: 'Бэйдж'
+      category: 'Категория'
+      gist: 'Gist'
+      question: 'Вопрос'
+      test: 'Тест'
+      test_passage: 'Прохождение Теста'
+      user: 'Пользователь'

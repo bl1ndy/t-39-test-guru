@@ -10,6 +10,8 @@ class TestPassage < ApplicationRecord
   before_validation :before_validation_set_current_question, on: :create
   before_update :before_update_set_next_question
 
+  scope :passed, -> { where(passed: true) }
+
   MINIMAL_SUCCESS_RATE = 85
 
   def accept!(answer_ids)
@@ -22,6 +24,10 @@ class TestPassage < ApplicationRecord
     current_question.nil?
   end
 
+  def pass
+    update_column(:passed, true) if success_rate >= MINIMAL_SUCCESS_RATE # rubocop:disable Rails/SkipsModelValidations
+  end
+
   def current_progress
     passed_questions_count = test.questions.order(:id).index(current_question)
     (passed_questions_count.to_f / test.questions.count * 100).round
@@ -29,10 +35,6 @@ class TestPassage < ApplicationRecord
 
   def success_rate
     (correct_questions.to_f / test.questions.count * 100).round
-  end
-
-  def passed?
-    success_rate >= MINIMAL_SUCCESS_RATE
   end
 
   private

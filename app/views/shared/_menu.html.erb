@@ -4,8 +4,9 @@
 
     <ul class="nav col-12 col-lg-auto">
       <% if current_user&.admin? %>
-        <li class="nav-link px-2 text-white"><%= "\u2699 Admin:" %></li>
-        <li><%= link_to "Tests", admin_tests_path, class: 'nav-link px-2 text-white' %></li>
+        <li class="nav-link px-2 text-white"><%= "\u2699 #{t('.admin')}:" %></li>
+        <li><%= link_to t('.links.admin.tests'), admin_tests_path, class: 'nav-link px-2 text-white' %></li>
+        <li><%= link_to t('.links.admin.badges'), admin_badges_path, class: 'nav-link px-2 text-white' %></li>
       <% end %>
     </ul>
 
@@ -18,7 +19,9 @@
             </a>
 
             <ul class="dropdown-menu">
-              <li><%= link_to t('.buttons.logout'), destroy_user_session_path, method: :delete, class: 'dropdown-item' %></li>
+              <li><%= link_to t('.links.achievements'), achievements_path, class: 'dropdown-item' %></li>
+              <li class="dropdown-divider"></li>
+              <li><%= link_to t('.links.logout'), destroy_user_session_path, method: :delete, class: 'dropdown-item' %></li>
             </ul>
           </li>
         <% else %>

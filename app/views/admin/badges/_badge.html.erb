@@ -1,0 +1,16 @@
+<tr class="align-middle">
+  <td><%= image_tag badge.img_url, size: '50' %></td>
+  <td><%= badge.title %></td>
+  <td><%= badge.rule.titleize %></td>
+  <td><%= badge.sub_rule %></td>
+  <td>
+    <%= link_to octicon('pencil', class: 'align-middle'),
+                edit_admin_badge_path(badge),
+                class: 'btn btn-info'%>
+    <%= link_to octicon('trash', class: 'align-middle'),
+                admin_badge_path(badge),
+                method: :delete,
+                data: { confirm: t('.links.confirm') },
+                class: 'btn btn-danger' %>
+  </td>
+</tr>

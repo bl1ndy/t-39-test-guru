@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_09_190903) do
+ActiveRecord::Schema.define(version: 2022_07_13_132753) do
+
+  create_table "achievements", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "badge_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["badge_id"], name: "index_achievements_on_badge_id"
+    t.index ["user_id"], name: "index_achievements_on_user_id"
+  end
 
   create_table "answers", force: :cascade do |t|
     t.text "body", null: false
@@ -19,6 +28,15 @@ ActiveRecord::Schema.define(version: 2022_07_09_190903) do
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "correct", default: false
     t.index ["question_id"], name: "index_answers_on_question_id"
+  end
+
+  create_table "badges", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "img_url", default: "/assets/default_badge-591d207ed11be2b72eaf3990c4949f60ae8a6f51bf217853902a5f4d0726f8a8.png", null: false
+    t.integer "rule", default: 0, null: false
+    t.string "sub_rule"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "categories", force: :cascade do |t|
@@ -65,6 +83,7 @@ ActiveRecord::Schema.define(version: 2022_07_09_190903) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "current_question_id"
     t.integer "correct_questions", default: 0
+    t.boolean "passed", default: false
     t.index ["current_question_id"], name: "index_tests_users_on_current_question_id"
     t.index ["test_id"], name: "index_tests_users_on_test_id"
     t.index ["user_id"], name: "index_tests_users_on_user_id"
@@ -96,6 +115,8 @@ ActiveRecord::Schema.define(version: 2022_07_09_190903) do
     t.index ["type"], name: "index_users_on_type"
   end
 
+  add_foreign_key "achievements", "badges"
+  add_foreign_key "achievements", "users"
   add_foreign_key "answers", "questions"
   add_foreign_key "gists", "questions"
   add_foreign_key "gists", "users"

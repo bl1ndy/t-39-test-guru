@@ -4,6 +4,7 @@
     <%= render 'form_inline', test: test == @test ? @test : test %>
   </td>
   <td><%= test.level %></td>
+  <td><%= test.category.title %></td>
   <td><%= test.questions.count %></td>
   <td><%= test.published %></td>
   <td>

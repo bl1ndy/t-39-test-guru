@@ -17,3 +17,7 @@
 .hide {
   display: none !important;
 }
+
+.monochromed {
+  filter: grayscale(100%);
+}

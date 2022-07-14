@@ -1,5 +1,5 @@
 admin = Admin.create(
-  email: 'admin@test.com',
+  email: 'ayoblindstone@gmail.com',
   first_name: "Admin",
   last_name: "Test",
   password: 'foobar',
@@ -10,11 +10,11 @@ admin = Admin.create(
 backend = Category.create(title: 'Backend')
 frontend = Category.create(title: 'Frontend')
 
-ruby = backend.tests.create(title: 'Ruby', level: 2, author: admin)
-go = backend.tests.create(title: 'Go', level: 3, author: admin)
-elixir = backend.tests.create(title: 'Elixir', level: 3, author: admin)
-html = frontend.tests.create(title: 'HTML', level: 1, author: admin)
-js = frontend.tests.create(title: 'JS', level: 2, author: admin)
+ruby = backend.tests.create(title: 'Ruby', level: 2, author: admin, published: true)
+go = backend.tests.create(title: 'Go', level: 3, author: admin, published: true)
+elixir = backend.tests.create(title: 'Elixir', level: 3, author: admin, published: true)
+html = frontend.tests.create(title: 'HTML', level: 1, author: admin, published: true)
+js = frontend.tests.create(title: 'JS', level: 2, author: admin, published: true)
 
 ruby_question1 = ruby.questions.create(body: 'What is a difference between class and module?')
 ruby_question2 = ruby.questions.create(body: 'What is a Rubocop?')
@@ -47,3 +47,10 @@ js_question.answers.create([
                                {body: 'Hash', correct: false},
                                {body: 'Tree', correct: true}
                              ])
+
+Badge.create(title: 'On first try!', rule: :first_attempt_success)
+Badge.create(title: 'Backend Guru', rule: :all_by_category, sub_rule: 'backend')
+Badge.create(title: 'Frontend Guru', rule: :all_by_category, sub_rule: 'frontend')
+Badge.create(title: 'First steps', rule: :all_by_difficulty, sub_rule: 'easy')
+Badge.create(title: 'Skill up', rule: :all_by_difficulty, sub_rule: 'medium')
+Badge.create(title: 'Hardcore', rule: :all_by_difficulty, sub_rule: 'hard')
