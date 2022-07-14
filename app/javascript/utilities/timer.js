@@ -1,15 +1,20 @@
 document.addEventListener('turbolinks:load', function() {
-  let timer = document.querySelector('#countdown')
+  let timer = document.getElementById('countdown')
   if (timer) {
     timer.addEventListener('load', countdown)
-    const interval = setInterval(countdown, 1000)
+    setInterval(countdown, 1000)
   }
 })
 
+const redirectToResult = function() {
+  window.location.replace(`${window.location.href}/result`);
+}
+
 const countdown = function() {
-  const endTime = document.querySelector('#countdown').dataset.endtime
+  const timer = document.getElementById('countdown')
+  const endTime = timer.dataset.endtime
   const difference = +new Date(endTime) - +new Date()
-  let remaining = ''
+  let remaining = 'Time is up!'
 
   if (difference > 0) {
     const parts = [
@@ -19,8 +24,9 @@ const countdown = function() {
     ]
     remaining = parts.map((part) => String(part).padStart(2, '0')).join(":")
   } else {
-    window.location.replace("/");
+    timer.classList.add('border-danger')
+    setTimeout(redirectToResult, 2000)
   }
 
-  document.getElementById("countdown").innerHTML = remaining
+  timer.innerHTML = remaining
 }

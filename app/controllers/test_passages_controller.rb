@@ -8,6 +8,7 @@ class TestPassagesController < ApplicationController
     @endtime = @test_passage.created_at + @test_passage.test.countdown
   end
 
+  # rubocop:disable Metrics/AbcSize
   def update
     @test_passage.accept!(params[:answer_ids])
 
@@ -19,9 +20,11 @@ class TestPassagesController < ApplicationController
 
       redirect_to result_test_passage_path(@test_passage)
     else
+      @endtime = @test_passage.created_at + @test_passage.test.countdown
       render :show
     end
   end
+  # rubocop:enable Metrics/AbcSize
 
   def result; end
 

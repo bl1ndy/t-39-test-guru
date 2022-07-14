@@ -62,6 +62,8 @@ class TestPassage < ApplicationRecord
   end
 
   def passed_by_time?
+    return true if test.countdown.zero?
+
     created_at + test.countdown >= Time.zone.now
   end
 end
