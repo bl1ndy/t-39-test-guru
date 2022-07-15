@@ -1,13 +1,16 @@
 document.addEventListener('turbolinks:load', function() {
   let timer = document.getElementById('countdown')
+
   if (timer) {
     timer.addEventListener('load', countdown)
     setInterval(countdown, 1000)
   }
 })
 
-const redirectToResult = function() {
-  window.location.replace(`${window.location.href}/result`);
+const update = function() {
+  const updateButton = document.getElementById('next-question')
+
+  updateButton.click()
 }
 
 const countdown = function() {
@@ -25,7 +28,7 @@ const countdown = function() {
     remaining = parts.map((part) => String(part).padStart(2, '0')).join(":")
   } else {
     timer.classList.add('border-danger')
-    setTimeout(redirectToResult, 2000)
+    setTimeout(update, 2000)
   }
 
   timer.innerHTML = remaining
