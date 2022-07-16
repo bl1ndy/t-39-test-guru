@@ -126,6 +126,9 @@ en:
           back: 'Back'
       form_inline:
         update: 'OK'
+      helpers:
+        formatted_countdown:
+          not_limited: 'Not limited'
       index:
         header: 'Available Tests'
         links:
@@ -133,6 +136,7 @@ en:
         table:
           actions: 'Actions'
           category: 'Category'
+          countdown: 'Countdown'
           published: 'Published'
           level: 'Level'
           questions_count: 'Questions count'
@@ -227,6 +231,7 @@ en:
       table:
         actions: 'Actions'
         category: 'Category'
+        countdown: 'Countdown'
         level: 'Level'
         questions_count: 'Questions count'
         title: 'Title'

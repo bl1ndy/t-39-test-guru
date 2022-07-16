@@ -25,7 +25,7 @@ class TestPassage < ApplicationRecord
   end
 
   def pass
-    update_column(:passed, true) if success_rate >= MINIMAL_SUCCESS_RATE # rubocop:disable Rails/SkipsModelValidations
+    update_column(:passed, true) if passed_by_answers? # rubocop:disable Rails/SkipsModelValidations
   end
 
   def current_progress
@@ -35,6 +35,12 @@ class TestPassage < ApplicationRecord
 
   def success_rate
     (correct_questions.to_f / test.questions.count * 100).round
+  end
+
+  def passed_by_time?
+    return true if test.countdown.zero?
+
+    created_at + test.countdown >= Time.zone.now
   end
 
   private
@@ -55,5 +61,9 @@ class TestPassage < ApplicationRecord
 
   def before_update_set_next_question
     self.current_question = test.questions.order(:id).where('id > ?', current_question.id).first
+  end
+
+  def passed_by_answers?
+    success_rate >= MINIMAL_SUCCESS_RATE
   end
 end

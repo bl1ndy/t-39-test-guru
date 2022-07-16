@@ -4,22 +4,30 @@ class TestPassagesController < ApplicationController
   before_action :find_test_passage!, only: %i[show update result gist]
   before_action :find_test!, only: %i[show update result]
 
-  def show; end
+  def show
+    @endtime = @test_passage.created_at + @test_passage.test.countdown
+  end
 
+  # rubocop:disable Metrics/AbcSize, Metrics/MethodLength
   def update
     @test_passage.accept!(params[:answer_ids])
 
-    if @test_passage.completed?
+    if @test_passage.completed? || !@test_passage.passed_by_time?
       @test_passage.pass
 
-      AchievementService.new(@test_passage).call if @test_passage.passed?
-      TestsMailer.completed_test(@test_passage).deliver_now
+      if @test_passage.passed?
+        AchievementService.new(@test_passage).call
+        TestsMailer.completed_test(@test_passage).deliver_now
+      end
 
       redirect_to result_test_passage_path(@test_passage)
     else
+      @endtime = @test_passage.created_at + @test_passage.test.countdown
+
       render :show
     end
   end
+  # rubocop:enable Metrics/AbcSize, Metrics/MethodLength
 
   def result; end
 

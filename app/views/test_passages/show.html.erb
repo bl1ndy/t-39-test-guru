@@ -11,6 +11,8 @@
   </div>
 </div>
 
+<%= timer(@endtime.to_s) if @test_passage.test.countdown > 0 %>
+
 <h3 class="mb-4">
   (<%= current_question_number(@test_passage.current_question)%> / <%= @test.questions.count %>)
   <%= @test_passage.current_question.body %>
@@ -30,7 +32,7 @@
     </div>
   <% end %>
 
-  <%= f.submit t('.buttons.submit'), class: 'btn btn-primary' %>
+  <%= f.submit t('.buttons.submit'), id: 'next-question', class: 'btn btn-primary' %>
 
   <%= link_to t('.links.gist'), gist_test_passage_path(@test_passage), method: :post, class: 'btn btn-warning' %>
 <% end %>

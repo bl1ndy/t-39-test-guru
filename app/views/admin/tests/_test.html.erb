@@ -6,6 +6,7 @@
   <td><%= test.level %></td>
   <td><%= test.category.title %></td>
   <td><%= test.questions.count %></td>
+  <td><%= formatted_countdown(test.countdown) %></td>
   <td><%= test.published %></td>
   <td>
     <%= link_to octicon('eye', class: 'align-middle'), admin_test_path(test), class: 'btn btn-secondary' %>
